@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>joDev | Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,200;1,400&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Icon -->
+    <link rel="icon" href="img/logo.png" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav id="portfolio-nav">
+      <h1 id="logo"><a href="/index.html">joDev</a></h1>
+    </nav>
+
+    <div class="container-portfolio" id="container-portfolio">
+      <header class="header-portfolio">
+        <h1>joDev Portfolio</h1>
+        <p>Let's find something amazing here!</p>
+      </header>
+      <main>
+        <div class="portfolio-sub-nav">
+          <ul>
+            <li><a href="#static-web">Static Web</a></li>
+            <li><a href="#dynamic-web">Dynamic Web</a></li>
+          </ul>
+        </div>
+        <div id="static-web">
+          <h2>Static Web</h2>
+          <div class="work-cards portfolio-page">
+            <div class="work-card show">
+              <div class="work-card-img-wrapper">
+                <img src="img/work-1.png" alt="work-1" class="work-card-img" />
+              </div>
+              <div class="work-card-text-wrapper">
+                <div class="work-card-name">
+                  <h3>Landing Page</h3>
+                </div>
+                <div class="work-card-desc">
+                  <p>
+                    Website Landing Page for FreeCodeCamp Certification Needs.
+                  </p>
+                </div>
+                <div class="work-card-cta">
+                  <a
+                    href="https://josephines1.github.io/product-landing-page/"
+                    target="_blank"
+                    class="work-cta-website"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                    ><span>visit website</span></a
+                  >
+                  <a
+                    href="https://github.com/josephines1/product-landing-page"
+                    target="_blank"
+                    class="work-cta-code"
+                    ><i class="fa-brands fa-github"></i
+                    ><span>view code</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="work-card show">
+              <div class="work-card-img-wrapper">
+                <img src="img/work-2.png" alt="work-1" class="work-card-img" />
+              </div>
+              <div class="work-card-text-wrapper">
+                <div class="work-card-name">
+                  <h3>Tribute Page</h3>
+                </div>
+                <div class="work-card-desc">
+                  <p>
+                    Bruno Mars Tribute website for Free Code Camp Certification
+                    needs.
+                  </p>
+                </div>
+                <div class="work-card-cta">
+                  <a
+                    href="https://josephines1.github.io/tribute-page/"
+                    target="_blank"
+                    class="work-cta-website"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                    ><span>visit website</span></a
+                  >
+                  <a
+                    href="https://github.com/josephines1/tribute-page"
+                    target="_blank"
+                    class="work-cta-code"
+                    ><i class="fa-brands fa-github"></i
+                    ><span>view code</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="dynamic-web">
+          <h2>Dynamic Web</h2>
+          <div class="work-cards portfolio-page">
+            <div class="work-card show">
+              <div class="work-card-img-wrapper">
+                <img
+                  src="img/opresent.png"
+                  alt="o-present"
+                  class="work-card-img"
+                />
+              </div>
+              <div class="work-card-text-wrapper">
+                <div class="work-card-name">
+                  <h3>O-Present</h3>
+                </div>
+                <div class="work-card-desc">
+                  <p>
+                    An open source application for web-based online presence
+                    needs, with GPS and selfie photo features.
+                  </p>
+                </div>
+                <div class="work-card-cta">
+                  <a
+                    href="https://github.com/josephines1/o-present"
+                    target="_blank"
+                    class="work-cta-code"
+                    ><i class="fa-brands fa-github"></i
+                    ><span>view code</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="index.html#services" class="nav-links">Services</a></li>
+          <li><a href="index.html#works" class="nav-links">My Works</a></li>
+          <li><a href="index.html#about" class="nav-links">About Me</a></li>
+          <li><a href="index.html#contact" class="nav-links">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-logo">
+        <a href="/index.html">joDev &copy; 2023</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/josephines1" target="_blank"
+          ><i class="fa-brands fa-square-github"></i
+        ></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+
+    <!-- My JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

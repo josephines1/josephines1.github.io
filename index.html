@@ -3,208 +3,488 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Josephine Portfolio</title>
-
-    <!-- My CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <title>joDev | Home</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,200;1,400&family=Quicksand&display=swap"
       rel="stylesheet"
     />
 
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
 
-    <!-- Website Icon -->
-    <link rel="website icon" type="png" href="resource/j-icon.png" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Icon -->
+    <link rel="icon" href="img/logo.png" />
   </head>
   <body>
-    <!-- NAVBAR START -->
-    <nav id="navbar">
-      <a href="#welcome-section" class="logo">
-        <img
-          src="https://cdn-icons-png.flaticon.com/128/9326/9326476.png"
-          alt="my-logo"
-        />
-        Josephine
-      </a>
-      <ul class="menus">
+    <!-- NAVBAR -->
+    <nav id="nav">
+      <h1 id="logo">
+        <a href="/">
+          <img
+            src="img/logo.png"
+            alt="joDev Logo"
+            width="20"
+            height="20"
+          /><span>joDev</span></a
+        >
+      </h1>
+      <ul>
+        <li><a href="#services" class="nav-links">Services</a></li>
+        <li><a href="#works" class="nav-links">My Works</a></li>
+        <li><a href="#about" class="nav-links">About Me</a></li>
         <li>
-          <a class="menu" href="#profile">Profile</a>
+          <a href="#contact" class="nav-links nav-cta-button">Let's Talk</a>
         </li>
-        <li>
-          <a class="menu" href="#projects">Portfolio</a>
-        </li>
-        <li>
-          <a class="menu action" href="#contact">Contact</a>
+        <li class="close-button" id="close-button">
+          <i class="fa-solid fa-xmark"></i>
         </li>
       </ul>
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </nav>
-    <!-- NAVBAR END -->
 
-    <!-- WELCOME START -->
-    <section id="welcome-section">
-      <p class="welcome-subtitle top">Hello! I'm a</p>
-      <h1 class="welcome-title">Web Developer</h1>
-      <p class="welcome-subtitle bottom">
-        I can help make your dream web happen.
-      </p>
-      <div class="welcome-actions">
-        <a class="welcome-action-link" href="#profile">get to know me</a>
-        <a class="welcome-action-link" href="#contact">contact me</a>
-      </div>
-    </section>
-    <!-- WELCOME END -->
-
-    <!-- PROFILE START  -->
-    <section id="profile">
-      <h2 class="profile-title">My Profile</h2>
-      <p class="profile-subtitle">It's me! Hi! I'm a web developer.</p>
-      <div class="profile-main">
-        <div class="profile-image">
-          <img
-            src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt="profile-image"
-          />
-        </div>
-        <div class="profile-content">
-          <p class="profile-main-text">
-            I am Josephine, 18 years old, from Indonesia. I am currently
-            pursuing a bachelor's degree in Information Systems and Technology
-            at Jakarta State University.
-            <span
-              >Here are some skills that I have learned about web
-              development.</span
-            >
-          </p>
-          <div class="profile-main-skills-icon">
-            <i class="fa-brands fa-square-js"></i>
-            <i class="fa-brands fa-php"></i>
-            <i class="fa-brands fa-python"></i>
+    <div class="container" id="container">
+      <!-- HERO -->
+      <div id="hero">
+        <div class="hero-text-wrapper">
+          <h3>Hi! I'm Josephine</h3>
+          <h2 class="title"><span>I'm a</span> &lt;web developer /&gt;</h2>
+          <p class="subtitle">Let's make your dream website come true.</p>
+          <div class="hero-cta-wrapper">
+            <a href="#contact" class="hero-cta-contact">
+              <i class="fa-regular fa-comments"></i>
+              <p class="hero-cta-contact-text">Let's Talk</p>
+            </a>
+            <a href="#" class="hero-cta-cv">
+              <i class="fa-solid fa-download"></i>
+              <p class="hero-cta-cv-text">My CV</p>
+            </a>
           </div>
+        </div>
+        <div class="hero-img-wrapper">
+          <img class="hero-img" src="img/vector-2.svg" alt="hero-image" />
+          <a
+            class="hero-img-credit"
+            href="https://www.freepik.com/free-vector/code-typing-concept-illustration_10259340.htm"
+            target="_blank"
+            >Image by storyset on Freepik</a
+          >
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div id="services">
+        <h2 class="title">&lt;services /&gt;</h2>
+        <p class="subtitle">what sites do you want to create?</p>
+        <div class="services-cards">
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <img
+                src="img/website-icon.png"
+                alt="custom website"
+                class="service-icon"
+              />
+            </div>
+            <h4 class="service-card-title">Custom Web</h4>
+            <p class="service-card-subtitle">
+              Build a site or an app that fits what you're looking for.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <img
+                src="img/company-icon.png"
+                alt="Company Profile"
+                class="service-icon"
+              />
+            </div>
+            <h4 class="service-card-title">Company Profile</h4>
+            <p class="service-card-subtitle">
+              Give your business profile a cool makeover and boost its worth.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <img
+                src="img/product-icon.png"
+                alt="Product Landing Page"
+                class="service-icon"
+              />
+            </div>
+            <h4 class="service-card-title">Landing Page</h4>
+            <p class="service-card-subtitle">
+              Jazz up your product to make it a hot seller.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MY WORKS -->
+      <div id="works">
+        <h2 class="title">&lt;my-works /&gt;</h2>
+        <p class="subtitle">let me show you incredible things!</p>
+        <div class="work-cards">
+          <div class="work-card">
+            <div class="work-card-img-wrapper">
+              <img src="img/work-1.png" alt="work-1" class="work-card-img" />
+            </div>
+            <div class="work-card-text-wrapper">
+              <div class="work-card-name">
+                <h3>Landing Page</h3>
+              </div>
+              <div class="work-card-desc">
+                <p>
+                  Website Landing Page for FreeCodeCamp Certification Needs.
+                </p>
+              </div>
+              <div class="work-card-cta">
+                <a
+                  href="https://josephines1.github.io/product-landing-page/"
+                  target="_blank"
+                  class="work-cta-website"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ><span>visit website</span></a
+                >
+                <a
+                  href="https://github.com/josephines1/product-landing-page"
+                  target="_blank"
+                  class="work-cta-code"
+                  ><i class="fa-brands fa-github"></i><span>view code</span></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="work-card">
+            <div class="work-card-img-wrapper">
+              <img src="img/work-2.png" alt="work-1" class="work-card-img" />
+            </div>
+            <div class="work-card-text-wrapper">
+              <div class="work-card-name">
+                <h3>Tribute Page</h3>
+              </div>
+              <div class="work-card-desc">
+                <p>
+                  Bruno Mars Tribute website for Free Code Camp Certification
+                  needs.
+                </p>
+              </div>
+              <div class="work-card-cta">
+                <a
+                  href="https://josephines1.github.io/tribute-page/"
+                  target="_blank"
+                  class="work-cta-website"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ><span>visit website</span></a
+                >
+                <a
+                  href="https://github.com/josephines1/tribute-page"
+                  target="_blank"
+                  class="work-cta-code"
+                  ><i class="fa-brands fa-github"></i><span>view code</span></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="work-card">
+            <div class="work-card-img-wrapper">
+              <img
+                src="img/opresent.png"
+                alt="o-present"
+                class="work-card-img"
+              />
+            </div>
+            <div class="work-card-text-wrapper">
+              <div class="work-card-name">
+                <h3>O-Present</h3>
+              </div>
+              <div class="work-card-desc">
+                <p>
+                  An open source application for web-based online presence
+                  needs, with GPS and selfie photo features.
+                </p>
+              </div>
+              <div class="work-card-cta">
+                <a
+                  href="https://github.com/josephines1/o-present"
+                  target="_blank"
+                  class="work-cta-code"
+                >
+                  <i class="fa-brands fa-github"></i><span>view code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="portfolio.html" class="works-cta">
+          View More Project <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- ABOUT ME -->
+      <div id="about">
+        <h2 class="title">&lt;about-me /&gt;</h2>
+        <div class="about-text-wrapper">
           <p>
-            You can visit my freeCodeCamp profile on
-            <a
-              href="https://www.freecodecamp.org/fcc29c292fc-cb28-4a31-b552-6b2cfa3e3214"
-              id="profile-link"
-              target="_blank"
-              >here</a
-            >
+            I am Josephine, a student from Indonesia. I am currently pursuing a
+            bachelor's degree in Information Systems and Technology at Jakarta
+            State University.
           </p>
+          <p>
+            Apart from academic activities in lectures, I learn website
+            development independently through learning resources available on
+            the internet.
+          </p>
+          <a href="#" class="about-cta">
+            <i class="fa-solid fa-download"></i>
+            <p class="about-cta-text">My CV</p>
+          </a>
         </div>
       </div>
-    </section>
-    <!-- PROFILE END  -->
 
-    <!-- PROJECTS START -->
-    <section id="projects">
-      <h2 class="projects-title">My Works</h2>
-      <p class="projects-subtitle">Let me show you incredible things!</p>
-      <div class="projects-main">
-        <a
-          href="https://josephines1.github.io/tribute-page/"
-          class="project-tile"
-          target="_blank"
-        >
-          <img src="resource/tribute-page.png" alt="tribute-page" />
-          <div class="project-desc">
-            <h3 class="project-title">Tribute Page</h3>
-            <p class="project-text">A tribute page about Bruno Mars.</p>
-            <p class="project-date"><small>created on: 28-Sept-2023</small></p>
+      <!-- TOOLS -->
+      <div id="tools">
+        <h2 class="title">&lt;tools /&gt;</h2>
+        <div class="tools-icon-wrapper">
+          <div class="tool-icon-wrapper">
+            <img
+              class="tool-icon"
+              src="img/html-5-icon.png"
+              alt="html"
+              title="HTML-5"
+            />
+            <small>HTML-5</small>
           </div>
-        </a>
-        <a
-          href="https://josephines1.github.io/product-landing-page/"
-          class="project-tile"
-          target="_blank"
-        >
-          <img
-            src="resource/product-landing-page.png"
-            alt="product-landing-page"
-          />
-          <div class="project-desc">
-            <h3 class="project-title">Product Landing Page</h3>
-            <p class="project-text">Cloth products landing page.</p>
-            <p class="project-date"><small>created on: 30-Sept-2023</small></p>
+          <div class="tool-icon-wrapper">
+            <img
+              class="tool-icon"
+              src="img/css-3-icon.png"
+              alt="css"
+              title="CSS"
+            />
+            <small>CSS-3</small>
           </div>
-        </a>
-        <a
-          href="https://josephines1.github.io/technical-documentation-page/"
-          class="project-tile"
-          target="_blank"
-        >
-          <img
-            src="resource/technical-documentation-page.png"
-            alt="tribute-page"
-          />
-          <div class="project-desc">
-            <h3 class="project-title">Documentation Web Page</h3>
-            <p class="project-text">Technical Documentation For JavaScript.</p>
-            <p class="project-date"><small>created on: 27-Sept-2023</small></p>
+          <div class="tool-icon-wrapper">
+            <img
+              class="tool-icon"
+              src="img/js-icon.png"
+              alt="javascript"
+              title="JavaScript"
+            />
+            <small>JavaScript</small>
           </div>
-        </a>
+          <div class="tool-icon-wrapper">
+            <img
+              class="tool-icon"
+              src="img/bootstrap-icon.png"
+              alt="bootstrap"
+              title="Bootstrap"
+            />
+            <small>Bootstrap 5</small>
+          </div>
+          <div class="tool-icon-wrapper">
+            <img
+              class="tool-icon"
+              src="img/figma-icon.png"
+              alt="figma"
+              title="Figma"
+            />
+            <small>Figma</small>
+          </div>
+          <div class="tool-icon-wrapper">
+            <img
+              class="tool-icon"
+              src="img/mysql-icon.png"
+              alt="mysql"
+              title="MySQL"
+            />
+            <small>MySQL</small>
+          </div>
+          <div class="tool-icon-wrapper">
+            <img
+              class="tool-icon"
+              src="img/php-icon.png"
+              alt="php"
+              title="PHP Native"
+            />
+            <small>PHP</small>
+          </div>
+          <div class="tool-icon-wrapper">
+            <img
+              class="tool-icon"
+              src="img/codeIgniter-icon.png"
+              alt="codeIgniter"
+              title="PHP CodeIgniter"
+            />
+            <small>CodeIgniter 4</small>
+          </div>
+          <div class="tool-icon-wrapper">
+            <img
+              class="tool-icon"
+              src="img/laravel-icon.jpg"
+              alt="laravel"
+              title="PHP Laravel"
+            />
+            <small>Laravel 10</small>
+          </div>
+        </div>
       </div>
-    </section>
-    <!-- PROJECTS END -->
 
-    <!-- CONTACT START -->
-    <section id="contact">
-      <h2 class="contact-title">Let's work together!</h2>
-      <p class="contact-subtitle">make your dream website happen</p>
-      <div class="contact-main">
-        <a href="mailto:example@example.com">
-          <i class="fa-solid fa-envelope"></i>
-          Send a mail
-        </a>
-        <a href="#">
-          <i class="fa-brands fa-instagram"></i>
-          Instagram
-        </a>
-        <a href="https://github.com/josephines1/" target="_blank">
-          <i class="fa-brands fa-github"></i>
-          GitHub
-        </a>
+      <!-- CONTACT -->
+      <div id="contact">
+        <h2 class="title">Let's Talk!</h2>
+        <p class="subtitle">let me know what's your need for your web</p>
+
+        <div class="alert d-none">
+          <p>
+            <small>
+              Message Sent! Please wait my reply through email or whatsapp
+            </small>
+          </p>
+          <i class="fa-solid fa-circle-check fa-xl"></i>
+        </div>
+
+        <div class="contact-form">
+          <form class="form" id="form" name="submit-to-google-sheet">
+            <div class="form-inputs">
+              <div class="col">
+                <div class="form-control">
+                  <label for="name">Name *</label>
+                  <input type="text" placeholder="name" id="name" name="name" />
+                  <i class="fa-solid fa-circle-check ok-icon"></i>
+                  <i class="fa-solid fa-circle-exclamation fail-icon"></i>
+                  <small>Error Message</small>
+                </div>
+                <div class="form-control">
+                  <label for="email">Email *</label>
+                  <input
+                    type="text"
+                    placeholder="name@example.com"
+                    id="email"
+                    name="email"
+                  />
+                  <i class="fa-solid fa-circle-check ok-icon"></i>
+                  <i class="fa-solid fa-circle-exclamation fail-icon"></i>
+                  <small>Error Message</small>
+                </div>
+                <div class="form-control">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="text"
+                    placeholder="(+62)812-3456-7891"
+                    id="phone"
+                    name="phone"
+                  />
+                  <i class="fa-solid fa-circle-check ok-icon"></i>
+                  <i class="fa-solid fa-circle-exclamation fail-icon"></i>
+                  <small>Error Message</small>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-control">
+                  <label for="message">Message *</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="20"
+                    rows="5"
+                    placeholder="your message here..."
+                  ></textarea>
+                  <i class="fa-solid fa-circle-check ok-icon"></i>
+                  <i class="fa-solid fa-circle-exclamation fail-icon"></i>
+                  <small>Error Message</small>
+                </div>
+              </div>
+            </div>
+            <button type="submit" id="submit" name="submit" class="btn-submit">
+              Send
+            </button>
+            <button type="button" class="btn-loading d-none">
+              Sending Message...
+            </button>
+          </form>
+        </div>
       </div>
-    </section>
-    <!-- CONTACT END -->
+    </div>
 
-    <!-- FOOTER START -->
-    <footer id="footer">
-      <div class="footer-links">
+    <!-- Footer -->
+    <footer>
+      <div class="footer-nav">
         <ul>
-          <li>
-            <a href="#welcome-section">Home</a>
-          </li>
-          <li>
-            <a href="#profile">Profile</a>
-          </li>
-          <li>
-            <a href="#projects">Portfolio</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
+          <li><a href="#services" class="nav-links">Services</a></li>
+          <li><a href="#works" class="nav-links">My Works</a></li>
+          <li><a href="#about" class="nav-links">About Me</a></li>
+          <li><a href="#contact" class="nav-links">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-credit">
-        <p>
-          &copy; 2023 | Created by
-          <a href="https://github.com/josephines1/" target="_blank"
-            >Josephine</a
-          >
-        </p>
+      <div class="footer-logo">
+        <a href="/">joDev &copy; 2023</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/josephines1" target="_blank"
+          ><i class="fa-brands fa-square-github"></i
+        ></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
       </div>
     </footer>
-    <!-- FOOTER END -->
+
+    <!-- jQuery -->
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+
+    <!-- My JS -->
+    <script src="js/script.js"></script>
+
+    <script>
+      // Parallax Effect with jQuery
+      $(window).scroll(function () {
+        let wScroll = $(this).scrollTop();
+
+        // Services Parallax
+        if (wScroll > $("#services").offset().top - 250) {
+          $(".service-card").each(function (i) {
+            setTimeout(function () {
+              $(".service-card").eq(i).addClass("show");
+            }, 200 * (i + 1));
+          });
+        }
+
+        // Works/Portfolio Parallax
+        if (wScroll > $("#works").offset().top - 250) {
+          $(".work-card").each(function (i) {
+            setTimeout(function () {
+              $(".work-card").eq(i).addClass("show");
+            }, 200 * (i + 1));
+          });
+        }
+
+        // About Parallax
+        if (wScroll > $("#about").offset().top - 300) {
+          $(".about-text-wrapper").addClass("show");
+
+          setTimeout(function () {
+            $(".tool-icon-wrapper").each(function (i) {
+              setTimeout(function () {
+                $(".tool-icon-wrapper").eq(i).addClass("show");
+              }, 100 * (i + 1));
+            });
+          }, 200);
+        }
+      });
+    </script>
   </body>
 </html>
