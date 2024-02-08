@@ -290,7 +290,7 @@ nav ul li a:not(.nav-cta-button):hover::after {
   margin-top: 3em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 5px;
+  gap: 0.8em;
   justify-content: center;
 }
 
@@ -793,8 +793,8 @@ footer a {
   padding-block: 0.5em;
 }
 .work-cards.portfolio-page {
-  margin-top: 0;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+  margin: 2em 10%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: start;
 }
 .work-cards.portfolio-page .work-card {

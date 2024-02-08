@@ -1,3 +1,86 @@
+// Fetch Portfolios Data
+document.addEventListener("DOMContentLoaded", async function () {
+  const portfolios = await getPortfolios();
+  updateViewPortfolios(portfolios);
+  console.log("ok");
+});
+
+function getPortfolios() {
+  return fetch("json/portfolio.json").then((response) => response.json());
+}
+
+function updateViewPortfolios(results) {
+  let portfolios = "";
+  results.forEach((result) => (portfolios += showPortfolios(result)));
+  const portfoliosContainer = document.getElementById("portfolios-container");
+  portfoliosContainer.innerHTML = portfolios;
+}
+
+function showPortfolios(portfolio) {
+  if (portfolio.webLink !== null) {
+    view = `<div class="work-card show">
+              <div class="work-card-img-wrapper">
+                <img
+                  src="img/works/${portfolio.image}"
+                  alt="${portfolio.name}"
+                  class="work-card-img"
+                />
+              </div>
+              <div class="work-card-text-wrapper">
+                <div class="work-card-name">
+                  <h3>${portfolio.name}</h3>
+                </div>
+                <div class="work-card-desc">
+                  <p>${portfolio.desc}</p>
+                </div>
+                <div class="work-card-cta">
+                  <a
+                    href="${portfolio.webLink}"
+                    target="_blank"
+                    class="work-cta-website"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                    ><span>visit website</span></a
+                  >
+                  <a
+                    href="${portfolio.codeLink}"
+                    target="_blank"
+                    class="work-cta-code"
+                    ><i class="fa-brands fa-github"></i><span>view code</span></a
+                  >
+                </div>
+              </div>
+            </div>`;
+  } else {
+    view = `<div class="work-card show">
+              <div class="work-card-img-wrapper">
+                <img
+                  src="img/works/${portfolio.image}"
+                  alt="${portfolio.name}"
+                  class="work-card-img"
+                />
+              </div>
+              <div class="work-card-text-wrapper">
+                <div class="work-card-name">
+                  <h3>${portfolio.name}</h3>
+                </div>
+                <div class="work-card-desc">
+                  <p>${portfolio.desc}</p>
+                </div>
+                <div class="work-card-cta">                  
+                  <a
+                    href="${portfolio.codeLink}"
+                    target="_blank"
+                    class="work-cta-code"
+                    ><i class="fa-brands fa-github"></i><span>view code</span></a
+                  >
+                </div>
+              </div>
+            </div>`;
+  }
+
+  return view;
+}
+
 const nav = document.getElementById("nav");
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const closeButton = document.getElementById("close-button");
