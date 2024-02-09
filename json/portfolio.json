@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "category": "Static Web",
     "image": "landing-page.png",
     "name": "Landing Page",
     "desc": "Website Landing Page for FreeCodeCamp Certification Needs.",
@@ -9,6 +10,7 @@
   },
   {
     "id": 2,
+    "category": "Dynamic Web",
     "image": "opresent.png",
     "name": "O-Present",
     "desc": "An open source application for web-based online presence needs, with GPS and selfie photo features.",
@@ -17,6 +19,7 @@
   },
   {
     "id": 3,
+    "category": "Static Web",
     "image": "tribute-page.png",
     "name": "Tribute Page",
     "desc": "Bruno Mars Tribute website for Free Code Camp Certification needs.",
@@ -25,6 +28,7 @@
   },
   {
     "id": 4,
+    "category": "Dynamic Web",
     "image": "katik.png",
     "name": "Katik",
     "desc": "A website to help with the process of calculating the area and perimeter of a triangle to fulfill the Mini Coding Project from RevoU.",

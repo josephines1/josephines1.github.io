@@ -2,16 +2,23 @@
 document.addEventListener("DOMContentLoaded", async function () {
   const portfolios = await getPortfolios();
   updateViewPortfolios(portfolios);
-  console.log("ok");
 });
 
 function getPortfolios() {
   return fetch("json/portfolio.json").then((response) => response.json());
 }
 
-function updateViewPortfolios(results) {
+function updateViewPortfolios(results, category = false) {
   let portfolios = "";
-  results.forEach((result) => (portfolios += showPortfolios(result)));
+  if (!category) {
+    results.forEach((result) => (portfolios += showPortfolios(result)));
+  } else {
+    results.forEach((result) => {
+      if (result.category == category) {
+        portfolios += showPortfolios(result);
+      }
+    });
+  }
   const portfoliosContainer = document.getElementById("portfolios-container");
   portfoliosContainer.innerHTML = portfolios;
 }
@@ -80,6 +87,22 @@ function showPortfolios(portfolio) {
 
   return view;
 }
+
+$(".nav-category-link").on("click", async function () {
+  let category = $(this).html();
+
+  $(".nav-category-link").removeClass("active");
+  $(this).addClass("active");
+
+  const portfolios = await getPortfolios();
+
+  if (category == "All Projects") {
+    updateViewPortfolios(portfolios);
+    return;
+  }
+
+  updateViewPortfolios(portfolios, category);
+});
 
 const nav = document.getElementById("nav");
 const hamburgerMenu = document.getElementById("hamburger-menu");

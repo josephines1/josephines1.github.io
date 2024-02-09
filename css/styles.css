@@ -761,48 +761,29 @@ footer a {
   justify-content: center;
   flex-direction: column;
 }
-.portfolio-sub-nav {
-  padding: 2em 10%;
-}
-.portfolio-sub-nav ul {
+.nav-category {
+  margin: 1.5em 10%;
   display: flex;
-  align-items: center;
-  gap: 10px;
+  gap: 1em;
 }
-.portfolio-sub-nav ul li {
-  list-style: none;
-}
-.portfolio-sub-nav ul li a {
+.nav-category-link {
   text-decoration: none;
-  display: block;
-  padding: 10px 20px;
-  border: 1pt solid var(--primary);
-  border-radius: 50px;
-  font-size: 80%;
-  transition: 0.3s ease-in-out;
+  padding: 10px 15px;
+  border: 0.5pt solid var(--primary-darken);
+  border-radius: 10px;
 }
-.portfolio-sub-nav ul li a:hover {
-  background-color: var(--primary);
-}
-#static-web,
-#dynamic-web {
-  padding: 0em 10% 2em;
-}
-#static-web h2,
-#dynamic-web h2 {
-  padding-block: 0.5em;
+.nav-category-link.active {
+  background-color: var(--primary-darken);
+  color: var(--secondary);
 }
 .work-cards.portfolio-page {
-  margin: 2em 10%;
+  margin: 1em 10% 2em;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: start;
 }
 .work-cards.portfolio-page .work-card {
   max-width: 400px;
   min-width: 100%;
-}
-#dynamic-web {
-  padding-bottom: 4em;
 }
 
 @media screen and (min-width: 2160px) {
