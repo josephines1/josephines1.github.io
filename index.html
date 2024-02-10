@@ -143,106 +143,7 @@
       <div id="works">
         <h2 class="title">&lt;my-works /&gt;</h2>
         <p class="subtitle">let me show you incredible things!</p>
-        <div class="work-cards">
-          <div class="work-card">
-            <div class="work-card-img-wrapper">
-              <img
-                src="img/works/landing-page.png"
-                alt="work-1"
-                class="work-card-img"
-              />
-            </div>
-            <div class="work-card-text-wrapper">
-              <div class="work-card-name">
-                <h3>Landing Page</h3>
-              </div>
-              <div class="work-card-desc">
-                <p>
-                  Website Landing Page for FreeCodeCamp Certification Needs.
-                </p>
-              </div>
-              <div class="work-card-cta">
-                <a
-                  href="https://josephines1.github.io/product-landing-page/"
-                  target="_blank"
-                  class="work-cta-website"
-                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ><span>visit website</span></a
-                >
-                <a
-                  href="https://github.com/josephines1/product-landing-page"
-                  target="_blank"
-                  class="work-cta-code"
-                  ><i class="fa-brands fa-github"></i><span>view code</span></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="work-card">
-            <div class="work-card-img-wrapper">
-              <img
-                src="img/works/tribute-page.png"
-                alt="work-1"
-                class="work-card-img"
-              />
-            </div>
-            <div class="work-card-text-wrapper">
-              <div class="work-card-name">
-                <h3>Tribute Page</h3>
-              </div>
-              <div class="work-card-desc">
-                <p>
-                  Bruno Mars Tribute website for Free Code Camp Certification
-                  needs.
-                </p>
-              </div>
-              <div class="work-card-cta">
-                <a
-                  href="https://josephines1.github.io/tribute-page/"
-                  target="_blank"
-                  class="work-cta-website"
-                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ><span>visit website</span></a
-                >
-                <a
-                  href="https://github.com/josephines1/tribute-page"
-                  target="_blank"
-                  class="work-cta-code"
-                  ><i class="fa-brands fa-github"></i><span>view code</span></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="work-card">
-            <div class="work-card-img-wrapper">
-              <img
-                src="img/works/opresent.png"
-                alt="o-present"
-                class="work-card-img"
-              />
-            </div>
-            <div class="work-card-text-wrapper">
-              <div class="work-card-name">
-                <h3>O-Present</h3>
-              </div>
-              <div class="work-card-desc">
-                <p>
-                  An open source application for web-based online presence
-                  needs, with GPS and selfie photo features.
-                </p>
-              </div>
-              <div class="work-card-cta">
-                <a
-                  href="https://github.com/josephines1/o-present"
-                  target="_blank"
-                  class="work-cta-code"
-                >
-                  <i class="fa-brands fa-github"></i><span>view code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="work-cards" id="portfolios-container"></div>
         <a href="portfolio.html" class="works-cta">
           View More Project <i class="fa-solid fa-arrow-right"></i>
         </a>
@@ -272,87 +173,21 @@
       <!-- TOOLS -->
       <div id="tools">
         <h2 class="title">&lt;tools /&gt;</h2>
-        <div class="tools-icon-wrapper">
+        <div class="tools-icon-wrapper" id="tools-container">
           <div class="tool-icon-wrapper">
-            <img
-              class="tool-icon"
-              src="img/tools-icon/html-5-icon.png"
-              alt="html"
-              title="HTML-5"
-            />
-            <small>HTML-5</small>
-          </div>
-          <div class="tool-icon-wrapper">
-            <img
-              class="tool-icon"
-              src="img/tools-icon/css-3-icon.png"
-              alt="css"
-              title="CSS"
-            />
-            <small>CSS-3</small>
-          </div>
-          <div class="tool-icon-wrapper">
-            <img
-              class="tool-icon"
-              src="img/tools-icon/js-icon.png"
-              alt="javascript"
-              title="JavaScript"
-            />
-            <small>JavaScript</small>
-          </div>
-          <div class="tool-icon-wrapper">
-            <img
-              class="tool-icon"
-              src="img/tools-icon/bootstrap-icon.png"
-              alt="bootstrap"
-              title="Bootstrap"
-            />
-            <small>Bootstrap 5</small>
-          </div>
-          <div class="tool-icon-wrapper">
-            <img
-              class="tool-icon"
-              src="img/tools-icon/figma-icon.png"
-              alt="figma"
-              title="Figma"
-            />
-            <small>Figma</small>
-          </div>
-          <div class="tool-icon-wrapper">
-            <img
-              class="tool-icon"
-              src="img/tools-icon/mysql-icon.png"
-              alt="mysql"
-              title="MySQL"
-            />
-            <small>MySQL</small>
-          </div>
-          <div class="tool-icon-wrapper">
-            <img
-              class="tool-icon"
-              src="img/tools-icon/php-icon.png"
-              alt="php"
-              title="PHP Native"
-            />
-            <small>PHP</small>
-          </div>
-          <div class="tool-icon-wrapper">
-            <img
-              class="tool-icon"
-              src="img/tools-icon/codeIgniter-icon.png"
-              alt="codeIgniter"
-              title="PHP CodeIgniter"
-            />
-            <small>CodeIgniter 4</small>
-          </div>
-          <div class="tool-icon-wrapper">
-            <img
-              class="tool-icon"
-              src="img/tools-icon/laravel-icon.jpg"
-              alt="laravel"
-              title="PHP Laravel"
-            />
-            <small>Laravel 10</small>
+            <div class="icon-inner">
+              <div class="icon-front">
+                <img
+                  class="tool-icon"
+                  src="img/tools-icon/html-5-icon.png"
+                  alt="html"
+                  title="HTML-5"
+                />
+              </div>
+              <div class="icon-back">
+                <small>HTML-5</small>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -445,7 +280,7 @@
         </ul>
       </div>
       <div class="footer-logo">
-        <a href="/">joDev &copy; 2023</a>
+        <a href="/">joDev &copy; 2024</a>
       </div>
       <div class="footer-socials">
         <a href="https://github.com/josephines1" target="_blank"
@@ -487,15 +322,16 @@
         // About Parallax
         if (wScroll > $("#about").offset().top - 300) {
           $(".about-text-wrapper").addClass("show");
-
-          setTimeout(function () {
-            $(".tool-icon-wrapper").each(function (i) {
-              setTimeout(function () {
-                $(".tool-icon-wrapper").eq(i).addClass("show");
-              }, 100 * (i + 1));
-            });
-          }, 200);
         }
+      });
+
+      document.addEventListener("DOMContentLoaded", async function () {
+        const portfolios = await getPortfolios();
+        const firstThreePortfolios = portfolios.slice(0, 3);
+        updateViewPortfolios(firstThreePortfolios);
+
+        const tools = await getTools();
+        updateViewTools(tools);
       });
     </script>
   </body>

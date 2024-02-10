@@ -1,0 +1,78 @@
+{
+  "portfolios": [
+    {
+      "id": 1,
+      "category": "Static Web",
+      "image": "landing-page.png",
+      "name": "Landing Page",
+      "desc": "Website Landing Page for FreeCodeCamp Certification Needs.",
+      "webLink": "https://josephines1.github.io/product-landing-page/",
+      "codeLink": "https://github.com/josephines1/product-landing-page"
+    },
+    {
+      "id": 2,
+      "category": "Dynamic Web",
+      "image": "opresent.png",
+      "name": "O-Present",
+      "desc": "An open source application for web-based online presence needs, with GPS and selfie photo features.",
+      "webLink": null,
+      "codeLink": "https://github.com/josephines1/o-present"
+    },
+    {
+      "id": 3,
+      "category": "Static Web",
+      "image": "tribute-page.png",
+      "name": "Tribute Page",
+      "desc": "Bruno Mars Tribute website for Free Code Camp Certification needs.",
+      "webLink": "https://josephines1.github.io/tribute-page/",
+      "codeLink": "https://github.com/josephines1/tribute-page"
+    },
+    {
+      "id": 4,
+      "category": "Dynamic Web",
+      "image": "katik.png",
+      "name": "Katik",
+      "desc": "A website to help with the process of calculating the area and perimeter of a triangle to fulfill the Mini Coding Project from RevoU.",
+      "webLink": "https://josephines1.github.io/revou-mini-project/",
+      "codeLink": "https://github.com/josephines1/revou-mini-project"
+    }
+  ],
+  "tools": [
+    {
+      "name": "HTML-5",
+      "image": "html-5-icon.png"
+    },
+    {
+      "name": "CSS 3",
+      "image": "css-3-icon.png"
+    },
+    {
+      "name": "JavaScript",
+      "image": "js-icon.png"
+    },
+    {
+      "name": "Bootstrap 5",
+      "image": "bootstrap-icon.png"
+    },
+    {
+      "name": "Figma",
+      "image": "figma-icon.png"
+    },
+    {
+      "name": "MySQL",
+      "image": "mysql-icon.png"
+    },
+    {
+      "name": "PHP",
+      "image": "php-icon.png"
+    },
+    {
+      "name": "CodeIgniter 4",
+      "image": "codeIgniter-icon.png"
+    },
+    {
+      "name": "Laravel 10",
+      "image": "laravel-icon.jpg"
+    }
+  ]
+}

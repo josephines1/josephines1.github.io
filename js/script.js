@@ -1,11 +1,9 @@
 // Fetch Portfolios Data
-document.addEventListener("DOMContentLoaded", async function () {
-  const portfolios = await getPortfolios();
-  updateViewPortfolios(portfolios);
-});
-
-function getPortfolios() {
-  return fetch("json/portfolio.json").then((response) => response.json());
+async function getPortfolios() {
+  let result = await fetch("json/data.json").then((response) =>
+    response.json()
+  );
+  return result["portfolios"];
 }
 
 function updateViewPortfolios(results, category = false) {
@@ -103,6 +101,41 @@ $(".nav-category-link").on("click", async function () {
 
   updateViewPortfolios(portfolios, category);
 });
+
+// Fetch Tools Data
+async function getTools() {
+  let result = await fetch("json/data.json").then((response) =>
+    response.json()
+  );
+  return result["tools"];
+}
+
+function updateViewTools(results) {
+  let tools = "";
+  results.forEach((result) => (tools += showTools(result)));
+  const toolsContainer = document.getElementById("tools-container");
+  toolsContainer.innerHTML = tools;
+}
+
+function showTools(tool) {
+  view = `<div class="tool-icon-wrapper">
+            <div class="icon-inner">
+              <div class="icon-front">
+                <img
+                  class="tool-icon"
+                  src="img/tools-icon/${tool.image}"
+                  alt="${tool.name}"
+                  title="${tool.name}"
+                />
+              </div>
+              <div class="icon-back">
+                <small>${tool.name}</small>
+              </div>
+            </div>
+          </div>`;
+
+  return view;
+}
 
 const nav = document.getElementById("nav");
 const hamburgerMenu = document.getElementById("hamburger-menu");

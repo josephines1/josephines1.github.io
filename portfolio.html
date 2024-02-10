@@ -60,7 +60,7 @@
         </ul>
       </div>
       <div class="footer-logo">
-        <a href="/index.html">joDev &copy; 2023</a>
+        <a href="/index.html">joDev &copy; 2024</a>
       </div>
       <div class="footer-socials">
         <a href="https://github.com/josephines1" target="_blank"
@@ -75,5 +75,12 @@
 
     <!-- My JS -->
     <script src="js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        const portfolios = await getPortfolios();
+        updateViewPortfolios(portfolios);
+      });
+    </script>
   </body>
 </html>
