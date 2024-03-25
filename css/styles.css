@@ -465,25 +465,6 @@ nav ul li a:not(.nav-cta-button):hover::after {
   opacity: 1;
 }
 
-.about-cta {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  padding: 0.8em 1.5em;
-  border: 2px solid var(--primary);
-  font-size: 0.9em;
-  text-decoration: none;
-  margin-top: 1em;
-  border-radius: 5px;
-  transition: 0.2s ease-in;
-}
-
-.about-cta:hover {
-  background-color: var(--primary);
-}
-
 #tools {
   padding: 3em 10%;
   display: flex;
@@ -942,10 +923,6 @@ footer a {
     color: unset;
   }
 
-  .hero-cta-cv-text span {
-    display: none;
-  }
-
   .services-cards {
     margin-block: 3em;
     grid-template-rows: repeat(3, 1fr);
@@ -1022,10 +999,6 @@ footer a {
 
   .about-text-wrapper {
     text-align: center;
-  }
-
-  .about-cta {
-    margin-inline: auto;
   }
 
   #tools {
