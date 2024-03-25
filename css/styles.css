@@ -435,6 +435,7 @@ nav ul li a:not(.nav-cta-button):hover::after {
   gap: 20px;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 #about .title {
@@ -514,6 +515,9 @@ nav ul li a:not(.nav-cta-button):hover::after {
 
 .icon-front {
   background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon-back {
@@ -1017,8 +1021,8 @@ footer a {
   }
 
   .tool-icon {
-    width: 40px;
-    height: 40px;
+    width: 80%;
+    height: 80%;
     border-radius: 10px;
   }
 
