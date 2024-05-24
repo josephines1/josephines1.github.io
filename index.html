@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>joDev | Home</title>
+    <title>Home | JoDev</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,20 +26,15 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Icon -->
-    <link rel="icon" href="img/logo.png" />
+    <link rel="icon" href="img/logo_thumbnail.png" />
   </head>
   <body>
     <!-- NAVBAR -->
     <nav id="nav">
       <h1 id="logo">
         <a href="/">
-          <img
-            src="img/logo.png"
-            alt="joDev Logo"
-            width="20"
-            height="20"
-          /><span>joDev</span></a
-        >
+          <img src="img/logo.png" alt="JoDev Logo" class="logo-img" />
+        </a>
       </h1>
       <ul>
         <li><a href="#services" class="nav-links">Services</a></li>
@@ -62,17 +57,20 @@
     <div class="container" id="container">
       <!-- HERO -->
       <div id="hero">
+        <!-- HERO TEXT -->
         <div class="hero-text-wrapper">
           <h3>Hi! I'm Josephine</h3>
           <h2 class="title"><span>I'm a</span> &lt;web developer /&gt;</h2>
-          <p class="subtitle">Let's make your dream website come true.</p>
+          <p class="subtitle">Let me create a stunning website for you.</p>
           <div class="hero-cta-wrapper">
             <a href="#contact" class="hero-cta-contact">
-              <i class="fa-regular fa-comments"></i>
-              <p class="hero-cta-contact-text">Let's Talk</p>
+              <i class="fa-regular fa-comments hero-cta-contact-icon"></i>
+              <p class="hero-cta-contact-text">Start a Conversation</p>
             </a>
           </div>
         </div>
+
+        <!-- HERO IMAGE -->
         <div class="hero-img-wrapper">
           <img
             class="hero-img"
@@ -116,7 +114,7 @@
             </div>
             <h4 class="service-card-title">Company Profile</h4>
             <p class="service-card-subtitle">
-              Give your business profile a cool makeover and boost its worth.
+              Let me craft a website that truly represents your company.
             </p>
           </div>
           <div class="service-card">
@@ -141,25 +139,22 @@
         <p class="subtitle">let me show you incredible things!</p>
         <div class="work-cards" id="portfolios-container"></div>
         <a href="portfolio.html" class="works-cta">
-          View More Project <i class="fa-solid fa-arrow-right"></i>
+          View More Project
+          <i class="fa-solid fa-arrow-right works-cta-icon"></i>
         </a>
       </div>
 
       <!-- ABOUT ME -->
       <div id="about">
         <h2 class="title">&lt;about-me /&gt;</h2>
-        <div class="about-text-wrapper">
-          <p>
-            I am Josephine, a student from Indonesia. I am currently pursuing a
-            bachelor's degree in Information Systems and Technology at Jakarta
-            State University.
-          </p>
-          <p>
-            Apart from academic activities in lectures, I learn website
-            development independently through learning resources available on
-            the internet.
-          </p>
-        </div>
+        <p class="about-text">
+          An Information Systems and Technology undergraduate student at Jakarta
+          State University, interested in web development. Enthusiastic about
+          applying learning to real projects, detail-oriented, and committed to
+          continuous improvement. Skilled in various programming languages and
+          tools, eager to contribute to new projects and collaborate with
+          different teams.
+        </p>
       </div>
 
       <!-- TOOLS -->
@@ -272,7 +267,7 @@
         </ul>
       </div>
       <div class="footer-logo">
-        <a href="/">joDev &copy; 2024</a>
+        <a href="/">JoDev &copy; 2024</a>
       </div>
       <div class="footer-socials">
         <a href="https://github.com/josephines1" target="_blank"
@@ -318,13 +313,13 @@
 
         // About Parallax
         if (wScroll > $("#about").offset().top - 300) {
-          $(".about-text-wrapper").addClass("show");
+          $(".about-text").addClass("show");
         }
       });
 
       document.addEventListener("DOMContentLoaded", async function () {
         const portfolios = await getPortfolios();
-        const firstThreePortfolios = portfolios.slice(0, 3);
+        const firstThreePortfolios = portfolios.slice(0, 6);
         updateViewPortfolios(firstThreePortfolios);
 
         const tools = await getTools();

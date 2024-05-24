@@ -2,16 +2,16 @@
   "portfolios": [
     {
       "id": 1,
-      "category": "Static Web",
-      "image": "landing-page.png",
-      "name": "Landing Page",
-      "desc": "Website Landing Page for FreeCodeCamp Certification Needs.",
-      "webLink": "https://josephines1.github.io/product-landing-page/",
-      "codeLink": "https://github.com/josephines1/product-landing-page"
+      "category": "Landing Page",
+      "image": "o-present-landing-page.png",
+      "name": "O-Present Landing Page",
+      "desc": "Website landing page for O-Present project",
+      "webLink": "https://josephines1.github.io/o-present-landing-page/",
+      "codeLink": "https://github.com/josephines1/o-present-landing-page"
     },
     {
       "id": 2,
-      "category": "Dynamic Web",
+      "category": "Others",
       "image": "opresent.png",
       "name": "O-Present",
       "desc": "An open source application for web-based online presence needs, with GPS and selfie photo features.",
@@ -20,16 +20,16 @@
     },
     {
       "id": 3,
-      "category": "Static Web",
-      "image": "tribute-page.png",
-      "name": "Tribute Page",
-      "desc": "Bruno Mars Tribute website for Free Code Camp Certification needs.",
-      "webLink": "https://josephines1.github.io/tribute-page/",
-      "codeLink": "https://github.com/josephines1/tribute-page"
+      "category": "Others",
+      "image": "flicksearch.png",
+      "name": "FlickSearch",
+      "desc": "A website that facilitates movie searching using the OMDB API as its data source.",
+      "webLink": "https://josephines1.github.io/flicksearch/",
+      "codeLink": "https://github.com/josephines1/flicksearch"
     },
     {
       "id": 4,
-      "category": "Dynamic Web",
+      "category": "Others",
       "image": "tricalc.png",
       "name": "TriCalc",
       "desc": "A website to help with the process of calculating the area and perimeter of a triangle to fulfill the Mini Coding Project from RevoU.",
@@ -38,16 +38,7 @@
     },
     {
       "id": 5,
-      "category": "Static Web",
-      "image": "o-present-landing-page.png",
-      "name": "O-Present Landing Page",
-      "desc": "Revolutionize your attendance management with our cutting-edge online presence system, featuring real-time GPS tracking and selfie verification for secure and efficient workforce monitoring.",
-      "webLink": "https://josephines1.github.io/o-present-landing-page/",
-      "codeLink": "https://github.com/josephines1/o-present-landing-page"
-    },
-    {
-      "id": 6,
-      "category": "Dynamic Web",
+      "category": "Others",
       "image": "tastetrack.png",
       "name": "TasteTrack",
       "desc": "A website that facilitates recipes searching using TheMealDB API as its data source.",
@@ -55,13 +46,22 @@
       "codeLink": "https://github.com/josephines1/tastetrack"
     },
     {
+      "id": 6,
+      "category": "Landing Page",
+      "image": "landing-page.png",
+      "name": "Landing Page",
+      "desc": "Website Landing Page for FreeCodeCamp Certification Needs.",
+      "webLink": "https://josephines1.github.io/product-landing-page/",
+      "codeLink": "https://github.com/josephines1/product-landing-page"
+    },
+    {
       "id": 7,
-      "category": "Dynamic Web",
-      "image": "flicksearch.png",
-      "name": "FlickSearch",
-      "desc": "A website that facilitates movie searching using the OMDB API as its data source.",
-      "webLink": "https://josephines1.github.io/flicksearch/",
-      "codeLink": "https://github.com/josephines1/flicksearch"
+      "category": "Others",
+      "image": "tribute-page.png",
+      "name": "Tribute Page",
+      "desc": "Bruno Mars Tribute website for Free Code Camp Certification needs.",
+      "webLink": "https://josephines1.github.io/tribute-page/",
+      "codeLink": "https://github.com/josephines1/tribute-page"
     }
   ],
   "tools": [
