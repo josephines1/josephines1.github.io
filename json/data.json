@@ -5,6 +5,7 @@
       "category": "Landing Page",
       "image": "o-present-landing-page.png",
       "name": "O-Present Landing Page",
+      "date": "March 23, 2024",
       "desc": "Website landing page for O-Present project",
       "webLink": "https://josephines1.github.io/o-present-landing-page/",
       "codeLink": "https://github.com/josephines1/o-present-landing-page"
@@ -14,6 +15,7 @@
       "category": "Others",
       "image": "opresent.png",
       "name": "O-Present",
+      "date": "January 25, 2024 - April 22, 2024",
       "desc": "An open source application for web-based online presence needs, with GPS and selfie photo features.",
       "webLink": null,
       "codeLink": "https://github.com/josephines1/o-present"
@@ -23,6 +25,7 @@
       "category": "Others",
       "image": "flicksearch.png",
       "name": "FlickSearch",
+      "date": "February 11, 2024",
       "desc": "A website that facilitates movie searching using the OMDB API as its data source.",
       "webLink": "https://josephines1.github.io/flicksearch/",
       "codeLink": "https://github.com/josephines1/flicksearch"
@@ -32,6 +35,7 @@
       "category": "Others",
       "image": "tricalc.png",
       "name": "TriCalc",
+      "date": "December 6, 2023",
       "desc": "A website to help with the process of calculating the area and perimeter of a triangle to fulfill the Mini Coding Project from RevoU.",
       "webLink": "https://josephines1.github.io/revou-mini-project/",
       "codeLink": "https://github.com/josephines1/revou-mini-project"
@@ -41,6 +45,7 @@
       "category": "Others",
       "image": "tastetrack.png",
       "name": "TasteTrack",
+      "date": "February 12, 2024",
       "desc": "A website that facilitates recipes searching using TheMealDB API as its data source.",
       "webLink": "https://josephines1.github.io/tastetrack/",
       "codeLink": "https://github.com/josephines1/tastetrack"
@@ -50,6 +55,7 @@
       "category": "Landing Page",
       "image": "landing-page.png",
       "name": "Landing Page",
+      "date": "October 1, 2023",
       "desc": "Website Landing Page for FreeCodeCamp Certification Needs.",
       "webLink": "https://josephines1.github.io/product-landing-page/",
       "codeLink": "https://github.com/josephines1/product-landing-page"
@@ -59,6 +65,7 @@
       "category": "Others",
       "image": "tribute-page.png",
       "name": "Tribute Page",
+      "date": "September 26, 2023",
       "desc": "Bruno Mars Tribute website for Free Code Camp Certification needs.",
       "webLink": "https://josephines1.github.io/tribute-page/",
       "codeLink": "https://github.com/josephines1/tribute-page"

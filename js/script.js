@@ -19,11 +19,20 @@ function updateViewPortfolios(results, category = false) {
   }
   const portfoliosContainer = document.getElementById("portfolios-container");
   portfoliosContainer.innerHTML = portfolios;
+
+  // Add click event listener to each portfolio card
+  document.querySelectorAll(".work-card").forEach((card) => {
+    card.addEventListener("click", function () {
+      const portfolio = results.find(
+        (result) => result.name === this.querySelector("h3").innerText
+      );
+      openModal(portfolio);
+    });
+  });
 }
 
 function showPortfolios(portfolio) {
-  if (portfolio.webLink !== null) {
-    view = `<div class="work-card show">
+  view = `<div class="work-card show">
               <div class="work-card-img-wrapper">
                 <img
                   src="img/works/${portfolio.image}"
@@ -38,53 +47,66 @@ function showPortfolios(portfolio) {
                 <div class="work-card-desc">
                   <p>${portfolio.desc}</p>
                 </div>
-                <div class="work-card-cta">
-                  <a
-                    href="${portfolio.webLink}"
-                    target="_blank"
-                    class="work-cta-website"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                    ><span>visit website</span></a
-                  >
-                  <a
-                    href="${portfolio.codeLink}"
-                    target="_blank"
-                    class="work-cta-code"
-                    ><i class="fa-brands fa-github"></i><span>view code</span></a
-                  >
-                </div>
+                <p>Click to see the details</p>
               </div>
             </div>`;
-  } else {
-    view = `<div class="work-card show">
-              <div class="work-card-img-wrapper">
-                <img
-                  src="img/works/${portfolio.image}"
-                  alt="${portfolio.name}"
-                  class="work-card-img"
-                />
-              </div>
-              <div class="work-card-text-wrapper">
-                <div class="work-card-name">
-                  <h3>${portfolio.name}</h3>
-                </div>
-                <div class="work-card-desc">
-                  <p>${portfolio.desc}</p>
-                </div>
-                <div class="work-card-cta">                  
-                  <a
-                    href="${portfolio.codeLink}"
-                    target="_blank"
-                    class="work-cta-code"
-                    ><i class="fa-brands fa-github"></i><span>view code</span></a
-                  >
-                </div>
-              </div>
-            </div>`;
-  }
 
   return view;
 }
+
+// Open Modal Box
+function openModal(portfolio) {
+  const modal = document.getElementById("portfolioModal");
+  document.getElementById("modalTitle").innerText = portfolio.name;
+  document.getElementById("modalDate").innerText = portfolio.date;
+  document.getElementById("modalImage").src = `img/works/${portfolio.image}`;
+  document.getElementById("modalDescription").innerText = portfolio.desc;
+
+  const modalPreview = document.getElementById("modalPreview");
+  const modalSource = document.getElementById("modalSource");
+
+  if (portfolio.webLink) {
+    modalPreview.href = portfolio.webLink;
+    modalPreview.style.display = "flex";
+  } else {
+    modalPreview.style.display = "none";
+  }
+
+  if (portfolio.codeLink) {
+    modalSource.href = portfolio.codeLink;
+    modalSource.style.display = "flex";
+  } else {
+    modalSource.style.display = "none";
+  }
+
+  modal.style.display = "block";
+
+  // Tambahkan kelas 'html-modal-open' ke elemen <html> untuk nonaktifkan gulir
+  document.documentElement.classList.add("html-modal-open");
+}
+
+// Close Modal Box
+function closeModal() {
+  const modal = document.getElementById("portfolioModal");
+  modal.style.display = "none";
+
+  // Hapus kelas 'html-modal-open' dari elemen <html> untuk mengaktifkan kembali gulir
+  document.documentElement.classList.remove("html-modal-open");
+}
+
+// Event listener untuk tombol close di modal
+const span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+  closeModal();
+};
+
+// Event listener untuk mengklik di luar modal untuk menutupnya
+window.onclick = function (event) {
+  const modal = document.getElementById("portfolioModal");
+  if (event.target == modal) {
+    closeModal();
+  }
+};
 
 $(".nav-category-link").on("click", async function () {
   let category = $(this).html();

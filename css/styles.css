@@ -327,6 +327,7 @@ nav ul li a:not(.nav-cta-button):hover::after {
   max-width: 400px;
   min-width: 100%;
   margin-inline: auto;
+  cursor: pointer;
 }
 
 .work-card.show {
@@ -382,50 +383,113 @@ nav ul li a:not(.nav-cta-button):hover::after {
   font-size: 1.5em;
 }
 
-.work-card-cta {
+/* Modal Box */
+.html-modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 1em auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+}
+
+#modalImageContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
   margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#modalImage {
+  width: 100%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--cerulean-blue-600);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modalDescription {
+  margin-bottom: 1em;
+}
+
+.modal-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 3em;
+}
+
+.modal-cta a {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 0.8em;
-}
-
-.work-card-cta a {
-  padding: 0.5em 1em;
-  text-decoration: none;
-  border: 1px solid var(--cerulean-blue-500);
-  min-width: 8em;
-  border-radius: 2px;
-  transition: 0.2s ease-in;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.work-cta-website {
+  min-width: 120px;
+  text-align: center;
+  padding: 10px;
   background-color: var(--cerulean-blue-500);
+  border: 1px solid var(--cerulean-blue-500);
+  text-decoration: none;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.modal-cta a span,
+.modal-cta a i {
   color: var(--cerulean-blue-50);
 }
 
-.work-cta-website i,
-.work-cta-website span {
-  color: var(--text);
+.modal-cta a:hover span,
+.modal-cta a:hover i {
+  color: var(--cerulean-blue-50);
 }
 
-.work-cta-website i {
-  font-size: 0.85em;
+.modal-cta a:last-child {
+  background-color: transparent;
 }
 
-.work-card-cta a:hover {
+.modal-cta a:last-child span,
+.modal-cta a:last-child i {
+  color: var(--cerulean-blue-500);
+}
+
+.modal-cta a:hover {
   background-color: var(--cerulean-blue-600);
-  border: 1px solid var(--cerulean-blue-600);
-  transform: translateY(-3px);
 }
 
-.work-card-cta a:hover i,
-.work-card-cta a:hover span {
+.modal-cta a:last-child:hover span,
+.modal-cta a:last-child:hover i {
   color: var(--cerulean-blue-50);
 }
 
@@ -792,7 +856,7 @@ footer a {
   text-decoration: none;
   padding: 10px 15px;
   border: 0.5pt solid var(--cerulean-blue-600);
-  border-radius: 10px;
+  border-radius: 2px;
   cursor: pointer;
 }
 .nav-category-link.active {
@@ -974,21 +1038,13 @@ footer a {
     font-size: 100%;
   }
 
-  .work-card-cta {
-    gap: 10px;
-    font-size: 1em;
+  #modalImageContainer {
+    max-height: 300px;
+    overflow-y: hidden;
   }
 
-  .work-card-cta a span {
-    display: none;
-  }
-
-  .work-card-cta a {
-    width: 3em;
-    height: 3em;
-    min-width: 0;
-    border-radius: 100%;
-    padding: 0.5em;
+  .modal-content {
+    margin-top: 30%;
   }
 
   #about {
