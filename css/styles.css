@@ -155,12 +155,12 @@ nav ul li a:not(.nav-cta-button):hover::after {
 
 /* Hero */
 #hero {
-  padding: 0.5em 10% 2em;
+  padding: 2em 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1em;
-  min-height: calc(100vh - 5em);
+  min-height: 100vh;
   flex-wrap: wrap;
 }
 
@@ -978,7 +978,8 @@ footer a {
 
   #hero {
     flex-direction: column-reverse;
-    padding-block: 10em 4em;
+    padding-block: 7em 4em;
+    min-height: unset;
   }
 
   #hero div {
@@ -1119,7 +1120,7 @@ footer a {
   #hero {
     min-height: unset;
     gap: 3em;
-    padding-block: 5em;
+    padding-block: 8em 5em;
   }
   .hero-text-wrapper h2 span {
     display: none;
