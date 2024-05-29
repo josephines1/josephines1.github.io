@@ -55,7 +55,7 @@ nav {
   padding: 1.5em 10%;
   background-color: transparent;
   min-height: 5em;
-  position: sticky;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -64,6 +64,10 @@ nav {
 }
 
 #nav.show {
+  top: 0;
+}
+
+#nav.hide {
   top: -100px;
 }
 
@@ -974,7 +978,7 @@ footer a {
 
   #hero {
     flex-direction: column-reverse;
-    padding-block: 4em;
+    padding-block: 10em 4em;
   }
 
   #hero div {

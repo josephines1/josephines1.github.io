@@ -165,11 +165,13 @@ const body = document.body;
 // Scroll Behaviour
 function disableScroll() {
   body.style.overflow = "hidden";
+  document.documentElement.classList.add("html-modal-open");
 }
 
 function enableScroll() {
   body.style.overflowX = "hidden";
   body.style.overflowY = "auto";
+  document.documentElement.classList.remove("html-modal-open");
 }
 
 // Navbar on Mobile
@@ -207,13 +209,16 @@ if (navLinks) {
 
 // Sticky Position for Navbar
 var prevScrollpos = window.scrollY;
+var logoImg = document.getElementById("logo-img");
 if (nav) {
   window.onscroll = function () {
     var currentScrollPos = window.scrollY;
     if (prevScrollpos > currentScrollPos) {
-      nav.classList.remove("show");
-    } else {
+      nav.classList.remove("hide");
       nav.classList.add("show");
+    } else {
+      nav.classList.remove("show");
+      nav.classList.add("hide");
     }
 
     if (window.innerWidth > 800) {
@@ -221,10 +226,12 @@ if (nav) {
         nav.style.backgroundColor = "#fff";
         nav.style.fontSize = "85%";
         nav.style.boxShadow = "0 1px 15px rgba(0, 0, 0, 0.2)";
+        logoImg.style.width = "90px";
       } else if (currentScrollPos === 0) {
         nav.style.backgroundColor = "transparent";
         nav.style.fontSize = "100%";
         nav.style.boxShadow = "none";
+        logoImg.style.width = "100px";
       }
     }
 
