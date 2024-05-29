@@ -414,7 +414,6 @@ nav ul li a:not(.nav-cta-button):hover::after {
   position: relative;
   display: inline-block;
   width: 100%;
-  max-height: 400px;
   overflow-y: auto;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -440,6 +439,7 @@ nav ul li a:not(.nav-cta-button):hover::after {
 
 #modalDescription {
   margin-bottom: 1em;
+  text-align: center;
 }
 
 .modal-cta {
@@ -1092,6 +1092,10 @@ footer a {
 
   #portfolio-nav {
     background: transparent;
+  }
+
+  .nav-category {
+    flex-wrap: wrap;
   }
 }
 

@@ -44,9 +44,6 @@ function showPortfolios(portfolio) {
                 <div class="work-card-name">
                   <h3>${portfolio.name}</h3>
                 </div>
-                <div class="work-card-desc">
-                  <p>${portfolio.desc}</p>
-                </div>
                 <p>Click to see the details</p>
               </div>
             </div>`;

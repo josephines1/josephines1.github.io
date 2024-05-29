@@ -12,7 +12,7 @@
     },
     {
       "id": 2,
-      "category": "Others",
+      "category": "Custom Website",
       "image": "opresent.png",
       "name": "O-Present",
       "date": "January 25, 2024 - April 22, 2024",
@@ -21,8 +21,28 @@
       "codeLink": "https://github.com/josephines1/o-present"
     },
     {
+      "id": 7,
+      "category": "Custom Website",
+      "image": "era-afm.png",
+      "name": "PT. Sumber Multi Era Motor Inventory System",
+      "date": "March 29, 2024 - April 15, 2024",
+      "desc": "An inventory management information system website for PT. Sumber Multi Era Motor, featuring allocation, transfer, sales, and return functionalities, designed for seamless integration across all branches.",
+      "webLink": null,
+      "codeLink": null
+    },
+    {
+      "id": 6,
+      "category": "Company Profile",
+      "image": "kopiking.png",
+      "name": "KopiKing Company Profile",
+      "date": "December 28, 2023",
+      "desc": "Cafe KopiKing's company profile website is designed to showcase essential information about our cafe. The site includes a comprehensive menu, details about our history and vision, customer testimonials, and a contact page. All content can be easily managed through an intuitive administrator interface.",
+      "webLink": "https://kopiking.000webhostapp.com/",
+      "codeLink": null
+    },
+    {
       "id": 3,
-      "category": "Others",
+      "category": "API-Integrated",
       "image": "flicksearch.png",
       "name": "FlickSearch",
       "date": "February 11, 2024",
@@ -32,7 +52,7 @@
     },
     {
       "id": 4,
-      "category": "Others",
+      "category": "Custom Website",
       "image": "tricalc.png",
       "name": "TriCalc",
       "date": "December 6, 2023",
@@ -42,33 +62,13 @@
     },
     {
       "id": 5,
-      "category": "Others",
+      "category": "API-Integrated",
       "image": "tastetrack.png",
       "name": "TasteTrack",
       "date": "February 12, 2024",
-      "desc": "A website that facilitates recipes searching using TheMealDB API as its data source.",
+      "desc": "A food recipe website utilizing the OMDB API as its data source, featuring recipe ideas and search functionality.",
       "webLink": "https://josephines1.github.io/tastetrack/",
       "codeLink": "https://github.com/josephines1/tastetrack"
-    },
-    {
-      "id": 6,
-      "category": "Landing Page",
-      "image": "landing-page.png",
-      "name": "Landing Page",
-      "date": "October 1, 2023",
-      "desc": "Website Landing Page for FreeCodeCamp Certification Needs.",
-      "webLink": "https://josephines1.github.io/product-landing-page/",
-      "codeLink": "https://github.com/josephines1/product-landing-page"
-    },
-    {
-      "id": 7,
-      "category": "Others",
-      "image": "tribute-page.png",
-      "name": "Tribute Page",
-      "date": "September 26, 2023",
-      "desc": "Bruno Mars Tribute website for Free Code Camp Certification needs.",
-      "webLink": "https://josephines1.github.io/tribute-page/",
-      "codeLink": "https://github.com/josephines1/tribute-page"
     }
   ],
   "tools": [
