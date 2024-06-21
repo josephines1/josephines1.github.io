@@ -51,6 +51,16 @@
       "codeLink": "https://github.com/josephines1/flicksearch"
     },
     {
+      "id": 8,
+      "category": "Company Profile",
+      "image": "cp-props-construction.png",
+      "name": "Props Construction Company Profile",
+      "date": "June 21, 2024",
+      "desc": "A company profile website created using HTML, CSS, Bootstrap Framework, and JavaScript.",
+      "webLink": "https://josephines1.github.io/cp-props-construction/",
+      "codeLink": "https://github.com/josephines1/cp-props-construction"
+    },
+    {
       "id": 4,
       "category": "Custom Website",
       "image": "tricalc.png",
