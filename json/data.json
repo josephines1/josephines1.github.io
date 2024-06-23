@@ -6,7 +6,7 @@
       "image": "o-present-landing-page.png",
       "name": "O-Present Landing Page",
       "date": "March 23, 2024",
-      "desc": "Website landing page for O-Present project",
+      "desc": "A landing page for the O-Present Website application with the main aim of directing visitors to download the O-Present application. Created using HTML, CSS, and Bootstrap Framework.",
       "webLink": "https://josephines1.github.io/o-present-landing-page/",
       "codeLink": "https://github.com/josephines1/o-present-landing-page"
     },
@@ -16,7 +16,7 @@
       "image": "opresent.png",
       "name": "O-Present",
       "date": "January 25, 2024 - April 22, 2024",
-      "desc": "An open source application for web-based online presence needs, with GPS and selfie photo features.",
+      "desc": "An open source application for web-based online presence needs, with GPS and selfie photo features. Created using MySQL, CodeIgniter 4, Myth/Auth, Tabler.io, jQuery, and WebcamJS.",
       "webLink": null,
       "codeLink": "https://github.com/josephines1/o-present"
     },
@@ -26,7 +26,7 @@
       "image": "era-afm.png",
       "name": "PT. Sumber Multi Era Motor Inventory System",
       "date": "March 29, 2024 - April 15, 2024",
-      "desc": "An inventory management information system website for PT. Sumber Multi Era Motor, featuring allocation, transfer, sales, and return functionalities, designed for seamless integration across all branches.",
+      "desc": "An inventory management information system website for PT. Sumber Multi Era Motor, featuring allocation, transfer, sales, and return functionalities, designed for seamless integration across all branches. Created using MySQL, CodeIgniter 4, Myth/Auth, Tabler.io, and jQuery.",
       "webLink": null,
       "codeLink": null
     },
@@ -36,39 +36,9 @@
       "image": "kopiking.png",
       "name": "KopiKing Company Profile",
       "date": "December 28, 2023",
-      "desc": "Cafe KopiKing's company profile website is designed to showcase essential information about our cafe. The site includes a comprehensive menu, details about our history and vision, customer testimonials, and a contact page. All content can be easily managed through an intuitive administrator interface.",
+      "desc": "A website to display the (fictitious) company profile of Cafe KopiKing is designed to display menu information, our vision, customer testimonials, and a contact page. All content can be easily managed through an intuitive administrator interface. Created using MySQL, Laravel 10, and StartBootstrap.",
       "webLink": "https://kopiking.000webhostapp.com/",
       "codeLink": null
-    },
-    {
-      "id": 3,
-      "category": "API-Integrated",
-      "image": "flicksearch.png",
-      "name": "FlickSearch",
-      "date": "February 11, 2024",
-      "desc": "A website that facilitates movie searching using the OMDB API as its data source.",
-      "webLink": "https://josephines1.github.io/flicksearch/",
-      "codeLink": "https://github.com/josephines1/flicksearch"
-    },
-    {
-      "id": 8,
-      "category": "Company Profile",
-      "image": "cp-props-construction.png",
-      "name": "Props Construction Company Profile",
-      "date": "June 21, 2024",
-      "desc": "A company profile website created using HTML, CSS, Bootstrap Framework, and JavaScript.",
-      "webLink": "https://josephines1.github.io/cp-props-construction/",
-      "codeLink": "https://github.com/josephines1/cp-props-construction"
-    },
-    {
-      "id": 4,
-      "category": "Custom Website",
-      "image": "tricalc.png",
-      "name": "TriCalc",
-      "date": "December 6, 2023",
-      "desc": "A website to help with the process of calculating the area and perimeter of a triangle to fulfill the Mini Coding Project from RevoU.",
-      "webLink": "https://josephines1.github.io/revou-mini-project/",
-      "codeLink": "https://github.com/josephines1/revou-mini-project"
     },
     {
       "id": 5,
@@ -76,9 +46,49 @@
       "image": "tastetrack.png",
       "name": "TasteTrack",
       "date": "February 12, 2024",
-      "desc": "A food recipe website utilizing the OMDB API as its data source, featuring recipe ideas and search functionality.",
+      "desc": "A food recipe website utilizing the OMDB API as its data source, featuring recipe ideas and search functionality. Created using HTML, CSS, Bootstrap Framework, and JavaScript.",
       "webLink": "https://josephines1.github.io/tastetrack/",
       "codeLink": "https://github.com/josephines1/tastetrack"
+    },
+    {
+      "id": 8,
+      "category": "Company Profile",
+      "image": "cp-props-construction.png",
+      "name": "Props Construction Company Profile",
+      "date": "June 21, 2024",
+      "desc": "A website to display the (fictitious) Props Construction Company profile with about, services, projects and faq pages. Created using HTML, CSS, Bootstrap Framework, and JavaScript.",
+      "webLink": "https://josephines1.github.io/cp-props-construction/",
+      "codeLink": "https://github.com/josephines1/cp-props-construction"
+    },
+    {
+      "id": 9,
+      "category": "Landing Page",
+      "image": "lp-luxury-tailored.png",
+      "name": "Luxury Tailored Landing Page",
+      "date": "June 23, 2024",
+      "desc": "A landing page for the (fictitious) Luxury Tailored Company with the main objective of directing visitors to subscribe to the latest news from Luxury Tailored. Created using HTML, CSS, Bootstrap Framework, and JavaScript.",
+      "webLink": "https://josephines1.github.io/lp-luxury-tailored/",
+      "codeLink": "https://github.com/josephines1/lp-luxury-tailored"
+    },
+    {
+      "id": 4,
+      "category": "Custom Website",
+      "image": "tricalc.png",
+      "name": "TriCalc",
+      "date": "December 6, 2023",
+      "desc": "A website to help with the process of calculating the area and perimeter of a triangle to fulfill the Mini Coding Project from RevoU. Created using HTML, CSS, and JavaScript",
+      "webLink": "https://josephines1.github.io/revou-mini-project/",
+      "codeLink": "https://github.com/josephines1/revou-mini-project"
+    },
+    {
+      "id": 3,
+      "category": "API-Integrated",
+      "image": "flicksearch.png",
+      "name": "FlickSearch",
+      "date": "February 11, 2024",
+      "desc": "A website that facilitates movie searching using the OMDB API as its data source. Created using HTML, CSS, Bootstrap Framework, and JavaScript.",
+      "webLink": "https://josephines1.github.io/flicksearch/",
+      "codeLink": "https://github.com/josephines1/flicksearch"
     }
   ],
   "tools": [

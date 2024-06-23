@@ -869,7 +869,7 @@ footer a {
 }
 .work-cards.portfolio-page {
   margin: 1em 10% 2em;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   justify-content: start;
 }
 .work-cards.portfolio-page .work-card {
@@ -877,10 +877,16 @@ footer a {
 }
 
 @media screen and (min-width: 1512px) {
+  nav,
   body {
     font-size: 120%;
     max-width: 1512px;
     margin-inline: auto;
+  }
+
+  nav {
+    padding: 0;
+    padding-inline: 10px;
   }
 
   #hero {
@@ -1101,6 +1107,12 @@ footer a {
 
   .nav-category {
     flex-wrap: wrap;
+  }
+
+  .work-cards.portfolio-page {
+    margin: 1em 10% 2em;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: start;
   }
 }
 
