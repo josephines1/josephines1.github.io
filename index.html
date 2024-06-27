@@ -3,357 +3,263 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | JoDev</title>
+    <title>Josephine | Web Developer</title>
 
-    <!-- Google Font -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="./dist/css/styles.css" />
+
+    <!-- Web Icon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Fonts (Ubuntu) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,200;1,400&family=Quicksand&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
 
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <!-- My CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
-
-    <!-- Icon -->
-    <link rel="icon" href="img/logo_thumbnail.png" />
   </head>
   <body>
-    <!-- NAVBAR -->
-    <nav id="nav">
-      <h1 id="logo">
-        <a href="/">
-          <img
-            src="img/logo.png"
-            alt="JoDev Logo"
-            class="logo-img"
-            id="logo-img"
-          />
+    <!-- Navbar Start -->
+    <nav>
+      <div class="container">
+        <a href="." class="logo animate">
+          <span class="letter">J</span><span class="letter">o</span
+          ><span class="letter">s</span><span class="letter">e</span
+          ><span class="letter">p</span><span class="letter">h</span
+          ><span class="letter">i</span><span class="letter">n</span
+          ><span class="letter">e</span>
         </a>
-      </h1>
-      <ul>
-        <li><a href="#services" class="nav-links">Services</a></li>
-        <li><a href="#works" class="nav-links">My Works</a></li>
-        <li><a href="#about" class="nav-links">About Me</a></li>
-        <li>
-          <a href="#contact" class="nav-links nav-cta-button">Let's Talk</a>
-        </li>
-        <li class="close-button" id="close-button">
-          <i class="fa-solid fa-xmark"></i>
-        </li>
-      </ul>
-      <div class="hamburger-menu" id="hamburger-menu">
-        <div></div>
-        <div></div>
-        <div></div>
+
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-mobile">
+          <input type="checkbox" />
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <ul class="nav-links-mobile">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
     </nav>
+    <!-- Navbar End -->
 
-    <div class="container" id="container">
-      <!-- HERO -->
-      <div id="hero">
-        <!-- HERO TEXT -->
-        <div class="hero-text-wrapper">
-          <h3>Hi! I'm Josephine</h3>
-          <h2 class="title"><span>I'm a</span> &lt;web developer /&gt;</h2>
-          <p class="subtitle">Let me create a stunning website for you.</p>
-          <div class="hero-cta-wrapper">
-            <a href="#contact" class="hero-cta-contact">
-              <i class="fa-regular fa-comments hero-cta-contact-icon"></i>
-              <p class="hero-cta-contact-text">Start a Conversation</p>
-            </a>
+    <!-- Hero Start -->
+    <section id="hero">
+      <div class="container">
+        <div class="fade-in-down">
+          <h1>
+            Hi, I'm a<br />
+            Web Developer
+          </h1>
+          <p>I can help you create a website that suites your need.</p>
+          <div class="hero-cta">
+            <a href="#contact">Let's Talk</a>
+            <a href="#projects">View Projects</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/josephines1" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/josephine-santoso"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
           </div>
         </div>
+        <img
+          src="./assets/img/hero-img.png"
+          alt="Hero Image"
+          class="hero-img"
+        />
+      </div>
+    </section>
+    <!-- Hero End -->
 
-        <!-- HERO IMAGE -->
-        <div class="hero-img-wrapper">
-          <img
-            class="hero-img"
-            src="img/illustration/vector-2.svg"
-            alt="hero-image"
-          />
+    <!-- Projects Start -->
+    <section id="projects">
+      <div class="container">
+        <h3 class="underline fade-in-up">Projects</h3>
+        <h1 class="fade-in-up">What I’ve Built</h1>
+        <p class="fade-in-up">Check out my latest web development projects.</p>
+
+        <div class="projects-container"></div>
+      </div>
+    </section>
+    <!-- Projects End -->
+
+    <!-- About Start -->
+    <section id="about">
+      <div class="container">
+        <h3 class="underline fade-in-up">About</h3>
+
+        <div class="about-content-container">
+          <div>
+            <h1 class="fade-in-up">Who I Am</h1>
+            <p class="fade-in-up">
+              Hi, I'm Josephine. I'm a web developer specializing in CodeIgniter
+              4, and I'm based in Jakarta, Indonesia. I'm currently studying for
+              a Bachelor's degree in Information Systems and Technology.
+            </p>
+            <p class="fade-in-up">
+              I create high-performance websites with responsive and attractive
+              designs. I'm open to job opportunities where I can contribute,
+              learn, and grow. If you have an opportunity that matches my skills
+              and experience, please feel free to contact me.
+            </p>
+          </div>
+          <div>
+            <h1 class="fade-in-up">What I Can Do</h1>
+            <div class="skills-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Contact Start -->
+    <section id="contact">
+      <div class="container">
+        <div class="inner-container">
+          <h3 class="underline fade-in-up">Contact</h3>
+          <h1 class="fade-in-up">Get in Touch</h1>
+          <p class="fade-in-up">
+            If you want to discuss a project or have any questions, feel free to
+            reach out to me by filling out the form or messaging me on LinkedIn.
+            I'll respond to you as soon as I can.
+          </p>
           <a
-            class="hero-img-credit"
-            href="https://www.freepik.com/free-vector/code-typing-concept-illustration_10259340.htm"
+            href="https://www.linkedin.com/in/josephine-santoso"
             target="_blank"
-            >Image by storyset on Freepik</a
+            ><i class="fa-brands fa-linkedin"></i><span>Let's Connect</span></a
           >
         </div>
-      </div>
-
-      <!-- SERVICES -->
-      <div id="services">
-        <h2 class="title">&lt;services /&gt;</h2>
-        <p class="subtitle">what sites do you want to create?</p>
-        <div class="services-cards">
-          <div class="service-card">
-            <div class="service-icon-wrapper">
-              <img
-                src="img/services-icon/website-icon.png"
-                alt="custom website"
-                class="service-icon"
-              />
-            </div>
-            <h4 class="service-card-title">Custom Web</h4>
-            <p class="service-card-subtitle">
-              Build a site or an app that fits what you're looking for.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon-wrapper">
-              <img
-                src="img/services-icon/company-icon.png"
-                alt="Company Profile"
-                class="service-icon"
-              />
-            </div>
-            <h4 class="service-card-title">Company Profile</h4>
-            <p class="service-card-subtitle">
-              Let me craft a website that truly represents your company.
-            </p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon-wrapper">
-              <img
-                src="img/services-icon/product-icon.png"
-                alt="Product Landing Page"
-                class="service-icon"
-              />
-            </div>
-            <h4 class="service-card-title">Landing Page</h4>
-            <p class="service-card-subtitle">
-              Jazz up your product to make it a hot seller.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- MY WORKS -->
-      <div id="works">
-        <h2 class="title">&lt;my-works /&gt;</h2>
-        <p class="subtitle">let me show you incredible things!</p>
-        <div class="work-cards" id="portfolios-container"></div>
-        <a href="portfolio.html" class="works-cta">
-          View More Project
-          <i class="fa-solid fa-arrow-right works-cta-icon"></i>
-        </a>
-      </div>
-
-      <!-- ABOUT ME -->
-      <div id="about">
-        <h2 class="title">&lt;about-me /&gt;</h2>
-        <p class="about-text">
-          An Information Systems and Technology undergraduate student at Jakarta
-          State University, interested in web development. Enthusiastic about
-          applying learning to real projects, detail-oriented, and committed to
-          continuous improvement. Skilled in various programming languages and
-          tools, eager to contribute to new projects and collaborate with
-          different teams.
-        </p>
-      </div>
-
-      <!-- TOOLS -->
-      <div id="tools">
-        <h2 class="title">&lt;tools /&gt;</h2>
-        <div class="tools-icon-wrapper" id="tools-container">
-          <div class="tool-icon-wrapper">
-            <div class="icon-inner">
-              <div class="icon-front">
-                <img
-                  class="tool-icon"
-                  src="img/tools-icon/html-5-icon.png"
-                  alt="html"
-                  title="HTML-5"
-                />
-              </div>
-              <div class="icon-back">
-                <small>HTML-5</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CONTACT -->
-      <div id="contact">
-        <h2 class="title">Let's Talk!</h2>
-        <p class="subtitle">let me know what's your need for your web</p>
-
-        <div class="alert d-none">
-          <p>
-            <small>
-              Message Sent! Please wait my reply through email or whatsapp
-            </small>
-          </p>
-          <i class="fa-solid fa-circle-check fa-xl"></i>
-        </div>
-
-        <div class="contact-form">
+        <div class="inner-container fade-in-right">
           <form class="form" id="form" name="submit-to-google-sheet">
-            <div class="form-inputs">
-              <div class="col">
-                <div class="form-control">
-                  <label for="name">Name *</label>
-                  <input type="text" placeholder="name" id="name" name="name" />
-                  <i class="fa-solid fa-circle-check ok-icon"></i>
-                  <i class="fa-solid fa-circle-exclamation fail-icon"></i>
-                  <small>Error Message</small>
-                </div>
-                <div class="form-control">
-                  <label for="email">Email *</label>
-                  <input
-                    type="text"
-                    placeholder="name@example.com"
-                    id="email"
-                    name="email"
-                  />
-                  <i class="fa-solid fa-circle-check ok-icon"></i>
-                  <i class="fa-solid fa-circle-exclamation fail-icon"></i>
-                  <small>Error Message</small>
-                </div>
-                <div class="form-control">
-                  <label for="phone">Phone</label>
-                  <input
-                    type="text"
-                    placeholder="(+62)812-3456-7891"
-                    id="phone"
-                    name="phone"
-                  />
-                  <i class="fa-solid fa-circle-check ok-icon"></i>
-                  <i class="fa-solid fa-circle-exclamation fail-icon"></i>
-                  <small>Error Message</small>
-                </div>
-              </div>
-              <div class="col">
-                <div class="form-control">
-                  <label for="message">Message *</label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    cols="20"
-                    rows="5"
-                    placeholder="your message here..."
-                  ></textarea>
-                  <i class="fa-solid fa-circle-check ok-icon"></i>
-                  <i class="fa-solid fa-circle-exclamation fail-icon"></i>
-                  <small>Error Message</small>
-                </div>
-              </div>
+            <div class="form-control">
+              <label for="name">Name *</label>
+              <input type="text" placeholder="name" id="name" name="name" />
+              <i class="fa-solid fa-circle-check ok-icon"></i>
+              <i class="fa-solid fa-circle-exclamation fail-icon"></i>
+              <small>Error Message</small>
+            </div>
+            <div class="form-control">
+              <label for="email">Email *</label>
+              <input
+                type="text"
+                placeholder="name@example.com"
+                id="email"
+                name="email"
+              />
+              <i class="fa-solid fa-circle-check ok-icon"></i>
+              <i class="fa-solid fa-circle-exclamation fail-icon"></i>
+              <small>Error Message</small>
+            </div>
+            <div class="form-control">
+              <label for="phone">Phone</label>
+              <input
+                type="text"
+                placeholder="(+62)812-3456-7891"
+                id="phone"
+                name="phone"
+              />
+              <i class="fa-solid fa-circle-check ok-icon"></i>
+              <i class="fa-solid fa-circle-exclamation fail-icon"></i>
+              <small>Error Message</small>
+            </div>
+            <div class="form-control">
+              <label for="message">Message *</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="20"
+                rows="5"
+                placeholder="your message here..."
+              ></textarea>
+              <i class="fa-solid fa-circle-check ok-icon"></i>
+              <i class="fa-solid fa-circle-exclamation fail-icon"></i>
+              <small>Error Message</small>
             </div>
             <button type="submit" id="submit" name="submit" class="btn-submit">
-              Send
-            </button>
-            <button type="button" class="btn-loading d-none">
-              Sending Message...
+              <span class="button--text">Send</span>
+
+              <div class="button--loader">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
             </button>
           </form>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- Contact End -->
 
-    <!-- Footer -->
+    <!-- Footer Start -->
     <footer>
-      <div class="footer-nav">
-        <ul>
-          <li><a href="#services" class="nav-links">Services</a></li>
-          <li><a href="#works" class="nav-links">My Works</a></li>
-          <li><a href="#about" class="nav-links">About Me</a></li>
-          <li><a href="#contact" class="nav-links">Contact</a></li>
-        </ul>
+      <div class="container">
+        <div class="logo">
+          <a href="." class="logo footer-logo">
+            <span class="letter">J</span><span class="letter">o</span
+            ><span class="letter">s</span><span class="letter">e</span
+            ><span class="letter">p</span><span class="letter">h</span
+            ><span class="letter">i</span><span class="letter">n</span
+            ><span class="letter">e</span>
+          </a>
+        </div>
+        <div class="footer-menu">
+          <h3>Menus</h3>
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://github.com/josephines1" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/josephine-santoso"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
       </div>
-      <div class="footer-logo">
-        <a href="/">JoDev &copy; 2024</a>
-      </div>
-      <div class="footer-socials">
-        <a href="https://github.com/josephines1" target="_blank"
-          ><i class="fa-brands fa-square-github"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/josephine-santoso" target="_blank">
-          <i class="fa-brands fa-linkedin"></i
-        ></a>
+
+      <div class="copyright">
+        <p>Copyright © by Josephine 2024. All rights reserved.</p>
       </div>
     </footer>
-
-    <!-- Modal Box -->
-    <div id="portfolioModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <p id="modalDate"></p>
-        <div id="modalImageContainer">
-          <img id="modalImage" src="path-to-image.jpg" alt="Portfolio Image" />
-        </div>
-        <p id="modalDescription"></p>
-        <div class="modal-cta">
-          <a
-            id="modalPreview"
-            href="#"
-            target="_blank"
-            class="modal-cta-website"
-          >
-            <i class="fa-solid fa-arrow-up-right-from-square"></i
-            ><span>visit website</span>
-          </a>
-          <a id="modalSource" href="#" target="_blank" class="modal-cta-code">
-            <i class="fa-brands fa-github"></i><span>view code</span>
-          </a>
-        </div>
-      </div>
-    </div>
+    <!-- Footer End -->
 
     <!-- jQuery -->
-    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./dist/js/code.jquery.com_jquery-3.7.0.min.js"></script>
 
-    <!-- My JS -->
-    <script src="js/script.js"></script>
-
-    <script>
-      // Parallax Effect with jQuery
-      $(window).scroll(function () {
-        let wScroll = $(this).scrollTop();
-
-        // Services Parallax
-        if (wScroll > $("#services").offset().top - 250) {
-          $(".service-card").each(function (i) {
-            setTimeout(function () {
-              $(".service-card").eq(i).addClass("show");
-            }, 200 * (i + 1));
-          });
-        }
-
-        // Works/Portfolio Parallax
-        if (wScroll > $("#works").offset().top - 250) {
-          $(".work-card").each(function (i) {
-            setTimeout(function () {
-              $(".work-card").eq(i).addClass("show");
-            }, 200 * (i + 1));
-          });
-        }
-
-        // About Parallax
-        if (wScroll > $("#about").offset().top - 300) {
-          $(".about-text").addClass("show");
-        }
-      });
-
-      document.addEventListener("DOMContentLoaded", async function () {
-        const portfolios = await getPortfolios();
-        const firstThreePortfolios = portfolios.slice(0, 6);
-        updateViewPortfolios(firstThreePortfolios);
-
-        const tools = await getTools();
-        updateViewTools(tools);
-      });
-    </script>
+    <!-- JavaScript -->
+    <script src="./dist/js/script.js"></script>
   </body>
 </html>
