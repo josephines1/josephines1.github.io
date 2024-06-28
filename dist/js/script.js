@@ -42,10 +42,15 @@ async function renderProjects() {
       image.alt = project.name;
       projectItem.appendChild(image);
 
+      // Project details
+      const details = document.createElement("div");
+      details.classList.add("details");
+      projectItem.appendChild(details);
+
       // Project title
       const title = document.createElement("h3");
       title.textContent = project.name;
-      projectItem.appendChild(title);
+      details.appendChild(title);
 
       // Project tools badges
       const tools = document.createElement("div");
@@ -62,21 +67,22 @@ async function renderProjects() {
         tools.appendChild(badge);
       });
 
-      projectItem.appendChild(tools);
+      details.appendChild(tools);
 
       // Project description
       const description = document.createElement("p");
       description.textContent = project.desc;
-      projectItem.appendChild(description);
+      details.appendChild(description);
 
       // View website button
       if (project.webLink) {
         const webLinkBtn = document.createElement("a");
         webLinkBtn.classList.add("button");
+        webLinkBtn.classList.add("button-primary");
         webLinkBtn.textContent = "View Website";
         webLinkBtn.href = project.webLink;
         webLinkBtn.target = "_blank";
-        projectItem.appendChild(webLinkBtn);
+        details.appendChild(webLinkBtn);
       }
 
       // View code button
@@ -84,10 +90,19 @@ async function renderProjects() {
         const codeLinkBtn = document.createElement("a");
         codeLinkBtn.classList.add("button");
         codeLinkBtn.classList.add("code");
+        codeLinkBtn.classList.add("button-secondary");
         codeLinkBtn.textContent = "View Code";
         codeLinkBtn.href = project.codeLink;
         codeLinkBtn.target = "_blank";
-        projectItem.appendChild(codeLinkBtn);
+        details.appendChild(codeLinkBtn);
+      }
+
+      if (!project.webLink && !project.codeLink) {
+        const noLinkBtn = document.createElement("p");
+        noLinkBtn.classList.add("no-link");
+        noLinkBtn.textContent =
+          "There is no direct link available for this project.";
+        details.appendChild(noLinkBtn);
       }
 
       // Append project item to container

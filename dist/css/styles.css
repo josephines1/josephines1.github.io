@@ -3,10 +3,14 @@
   --background: #f8f5f5;
   --primary: #d15f31;
   --primary-dark: #b5481c;
-  --secondary: #c9c0b0;
+  --secondary: #f2f0ed;
+  --secondary-dark: #e9e5e0;
   --accent: #b2ac8f;
   --def-button-padding: 0.7rem 1.2rem;
+  --def-button-padding-md: 0.5rem 1rem;
   --def-button-radius: 0.5rem;
+  --def-container-padding-inline: 10%;
+  --def-container-padding-inline-md: 4%;
 }
 
 * {
@@ -38,8 +42,14 @@ h3 {
 .container {
   max-width: 1440px;
   margin-inline: auto;
-  padding-inline: 10%;
+  padding-inline: var(--def-container-padding-inline);
   padding-block: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-inline: var(--def-container-padding-inline-md);
+  }
 }
 
 h3.underline {
@@ -55,6 +65,37 @@ h3.underline::after {
   width: 100%;
   height: 0.2em;
   background-color: var(--accent);
+}
+
+.button {
+  padding: var(--def-button-padding);
+  border-radius: var(--def-button-radius);
+  text-decoration: none;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    padding: var(--def-button-padding-md);
+    font-size: 90%;
+  }
+}
+
+.button:hover {
+  transform: translate(0px, -0.3rem);
+}
+
+.button-primary {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+.button-primary:hover {
+  box-shadow: 0 20px 80px -10px var(--primary);
+}
+
+.button-secondary {
+  background-color: var(--secondary-dark);
 }
 
 /* Navbar */
@@ -224,7 +265,7 @@ nav .container {
 .nav-links-mobile {
   position: absolute;
   top: 100%;
-  right: 10%;
+  right: var(--def-container-padding-inline-md);
   background-color: rgba(209, 95, 49, 0.3);
   backdrop-filter: blur(15px);
   border-radius: 1rem;
@@ -271,7 +312,7 @@ nav .container {
 @media screen and (max-width: 576px) {
   .nav-links-mobile {
     width: unset;
-    left: 10%;
+    left: var(--def-container-padding-inline-md);
   }
 }
 
@@ -304,28 +345,6 @@ nav .container {
   margin-top: 2rem;
 }
 
-.hero-cta a {
-  padding: var(--def-button-padding);
-  border-radius: var(--def-button-radius);
-  text-decoration: none;
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
-}
-
-.hero-cta a:nth-child(1) {
-  border: 1px solid var(--primary);
-  background-color: var(--primary);
-  color: var(--background);
-}
-
-.hero-cta a:nth-child(2) {
-  border: 1px solid var(--primary);
-}
-
-.hero-cta a:hover {
-  background-color: var(--primary-dark);
-  color: var(--background);
-}
-
 .hero-socials {
   display: flex;
   justify-content: start;
@@ -347,11 +366,11 @@ nav .container {
 .hero-img {
   width: 50%;
   height: auto;
-  animation: floatImage 5s ease-in-out infinite;
+  animation: floatImageMirror 5s ease-in-out infinite;
   transform: scaleX(-0.7);
 }
 
-@keyframes floatImage {
+@keyframes floatImageMirror {
   0%,
   100% {
     transform: translateY(0) scaleX(-0.7) scaleY(0.7);
@@ -409,10 +428,13 @@ nav .container {
   width: calc(50% - 10px);
   padding: 20px;
   box-sizing: border-box;
+  border-radius: 0.5rem;
   opacity: 0;
-  box-shadow: 0px 0px 5px rgba(178, 172, 143, 0.5);
+  box-shadow: 0px 0.5rem 1rem rgba(178, 172, 143, 0.15);
   transform: translateX(-1rem);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 1.5s ease, transform 1.5s ease, max-height 1.5s ease;
+  overflow: hidden;
+  max-height: 300px; /* adjust based on image height */
 }
 
 .project-item:nth-child(even) {
@@ -421,21 +443,58 @@ nav .container {
 }
 
 .project-item img {
-  width: 100%;
-  height: auto;
+  display: block;
+  margin-inline: auto;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
+  height: 300px;
   margin-bottom: 1rem;
+}
+
+.project-item:hover img {
+  animation: floatImage 5s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.details {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.project-item:hover {
+  max-height: 1000px; /* adjust based on content height */
+}
+
+.project-item:hover .details {
+  opacity: 1;
 }
 
 .project-item h3 {
   margin-top: 0;
+  transition: opacity 0.3s;
+  opacity: 0;
 }
 
 .project-item .tools {
   margin-block: 0.5rem;
+  transition: opacity 0.3s;
+  opacity: 0;
 }
 
 .project-item p {
   margin-bottom: 2rem;
+  transition: opacity 0.3s;
+  opacity: 0;
 }
 
 /* --- .badge in about section */
@@ -444,29 +503,34 @@ nav .container {
   margin-right: 5px;
   color: var(--background);
   font-size: 0.75em;
+  transition: opacity 0.3s;
+  opacity: 0;
 }
 
 .project-item .button {
   display: inline-block;
   margin-right: 10px;
   margin-bottom: 10px;
-  padding: var(--def-button-padding);
-  border-radius: var(--def-button-radius);
-  background-color: var(--primary);
-  color: var(--background);
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s; /* Delay for 0.5s */
 }
 
-.project-item .button.code {
-  background-color: transparent;
-  border: 1px solid var(--primary);
-  color: var(--text);
+.project-item:hover h3,
+.project-item:hover .tools,
+.project-item:hover p,
+.project-item:hover .badge {
+  opacity: 1;
 }
 
-.project-item .button:hover {
-  background-color: var(--primary-dark);
-  color: var(--background);
+.project-item:hover .button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.no-link {
+  font-style: italic;
+  font-size: 80%;
 }
 
 /* Project Item Animation classes */
@@ -505,7 +569,7 @@ nav .container {
 }
 
 .about-content-container div p {
-  line-height: 2;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
@@ -567,7 +631,7 @@ nav .container {
 }
 
 #contact .container .inner-container p {
-  line-height: 2;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
@@ -585,7 +649,7 @@ nav .container {
   padding: var(--def-button-padding);
   border-radius: 3rem;
   text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 #contact .container div:nth-child(1) a span,
@@ -595,6 +659,10 @@ nav .container {
 
 #contact .container div:nth-child(1) a:hover {
   background-color: var(--primary-dark);
+}
+
+#contact .container div:nth-child(1) a:active {
+  transform: scale(0.9);
 }
 
 #form {
@@ -690,7 +758,10 @@ nav .container {
 .btn-submit:hover {
   color: #fff;
   background-color: var(--primary-dark);
-  transform: scale(0.95);
+}
+
+.btn-submit:active {
+  transform: scale(0.9);
 }
 
 .button--text {
@@ -786,6 +857,10 @@ footer .container {
   gap: 3em;
 }
 
+.footer-menu h3 {
+  margin-bottom: 0.8rem;
+}
+
 .footer-menu ul li {
   list-style: none;
   margin-bottom: 0.5rem;
@@ -824,7 +899,7 @@ footer .container {
   }
 }
 
-/* Animasi */
+/* Enterance Animation */
 @keyframes fadeInDown {
   from {
     opacity: 0;

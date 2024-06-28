@@ -131,6 +131,14 @@
       "icon": "fas fa-rocket"
     },
     {
+      "name": "GIT",
+      "icon": "fa-brands fa-git"
+    },
+    {
+      "name": "Github",
+      "icon": "fa-brands fa-github"
+    },
+    {
       "name": "Wordpress",
       "icon": "fab fa-wordpress"
     }
