@@ -151,6 +151,13 @@ async function renderProjects() {
 // Call the function to render projects with animation
 renderProjects();
 
+// Tap Hint for Tablet and Mobile
+document.querySelectorAll(".project-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});
+
 // About - Skills
 const skillsContainer = document.querySelector(".skills-container");
 

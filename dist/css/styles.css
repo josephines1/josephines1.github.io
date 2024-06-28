@@ -423,6 +423,7 @@ nav .container {
 }
 
 .project-item {
+  position: relative;
   background-color: #fff;
   text-align: left;
   width: calc(50% - 10px);
@@ -434,12 +435,77 @@ nav .container {
   transform: translateX(-1rem);
   transition: opacity 1.5s ease, transform 1.5s ease, max-height 1.5s ease;
   overflow: hidden;
-  max-height: 300px; /* adjust based on image height */
+  max-height: 300px;
 }
 
 .project-item:nth-child(even) {
   transform: translateX(1rem);
   margin-left: auto;
+}
+
+/* Hover hint animation for desktop */
+@media screen and (min-width: 1024px) {
+  .project-item {
+    position: relative;
+    transition: opacity 1.5s ease, transform 1.5s ease, max-height 1.5s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .project-item:hover {
+    box-shadow: 0 0 20px rgba(209, 95, 49, 0.6);
+  }
+
+  .project-item::after {
+    content: "Hover to see more";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(178, 172, 143, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    animation: floatHover 5s ease-in-out infinite;
+  }
+
+  .project-item:hover::after {
+    opacity: 0;
+  }
+}
+
+/* Tap hint animation for tablet and mobile */
+@media screen and (max-width: 768px) {
+  .project-item::before {
+    content: "Tap to see more";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    animation: floatHover 5s ease-in-out infinite;
+  }
+
+  .project-item:hover::before,
+  .project-item.active::before {
+    opacity: 0;
+  }
+}
+
+@keyframes floatHover {
+  0%,
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(5px) translateX(-50%);
+  }
 }
 
 .project-item img {
