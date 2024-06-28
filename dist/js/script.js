@@ -42,88 +42,106 @@ async function getPortfolios() {
 }
 
 // Function to render projects with animation
-async function renderProjects() {
+async function renderProjects(filterType = "all") {
   try {
     const projects = await getPortfolios();
     const projectsContainer = document.querySelector(".projects-container");
 
-    projects.forEach((project, index) => {
-      // Create project item elements
-      const projectItem = document.createElement("div");
-      projectItem.classList.add("project-item");
-      projectItem.classList.add("hidden"); // Initially hide project
+    projectsContainer.innerHTML = ""; // Clear previous projects
 
-      // Project image
-      const image = document.createElement("img");
-      image.src = `./assets/img/works/${project.image}`;
-      image.alt = project.name;
-      projectItem.appendChild(image);
+    projects.forEach((project) => {
+      if (filterType === "all" || project.type === filterType) {
+        // Create project item elements
+        const projectItem = document.createElement("div");
+        projectItem.classList.add("project-item");
+        projectItem.classList.add("hidden"); // Initially hide project
 
-      // Project details
-      const details = document.createElement("div");
-      details.classList.add("details");
-      projectItem.appendChild(details);
+        // Project type
+        const typeBadge = document.createElement("div");
+        typeBadge.classList.add("type-badge", project.type);
+        typeBadge.innerHTML = `
+            <span class="icon">&#9432;</span>
+            ${
+              project.type === "client-project"
+                ? "Client Project"
+                : "Self Project"
+            }
+        `;
 
-      // Project title
-      const title = document.createElement("h3");
-      title.textContent = project.name;
-      details.appendChild(title);
+        projectItem.appendChild(typeBadge);
 
-      // Project tools badges
-      const tools = document.createElement("div");
-      tools.classList.add("tools");
+        // Project image
+        const image = document.createElement("img");
+        image.src = `./assets/img/works/${project.image}`;
+        image.alt = project.name;
+        projectItem.appendChild(image);
 
-      // Split tools into an array (assuming they are comma-separated)
-      const toolsArray = project.tools.split(", ");
+        // Project details
+        const details = document.createElement("div");
+        details.classList.add("details");
+        projectItem.appendChild(details);
 
-      // Create badge for each tool
-      toolsArray.forEach((tool) => {
-        const badge = document.createElement("span");
-        badge.classList.add("badge");
-        badge.textContent = tool;
-        tools.appendChild(badge);
-      });
+        // Project title
+        const title = document.createElement("h3");
+        title.textContent = project.name;
+        details.appendChild(title);
 
-      details.appendChild(tools);
+        // Project tools badges
+        const tools = document.createElement("div");
+        tools.classList.add("tools");
 
-      // Project description
-      const description = document.createElement("p");
-      description.textContent = project.desc;
-      details.appendChild(description);
+        // Split tools into an array (assuming they are comma-separated)
+        const toolsArray = project.tools.split(", ");
 
-      // View website button
-      if (project.webLink) {
-        const webLinkBtn = document.createElement("a");
-        webLinkBtn.classList.add("button");
-        webLinkBtn.classList.add("button-primary");
-        webLinkBtn.textContent = "View Website";
-        webLinkBtn.href = project.webLink;
-        webLinkBtn.target = "_blank";
-        details.appendChild(webLinkBtn);
+        // Create badge for each tool
+        toolsArray.forEach((tool) => {
+          const badge = document.createElement("span");
+          badge.classList.add("badge");
+          badge.textContent = tool;
+          tools.appendChild(badge);
+        });
+
+        details.appendChild(tools);
+
+        // Project description
+        const description = document.createElement("p");
+        description.textContent = project.desc;
+        details.appendChild(description);
+
+        // View website button
+        if (project.webLink) {
+          const webLinkBtn = document.createElement("a");
+          webLinkBtn.classList.add("button");
+          webLinkBtn.classList.add("button-primary");
+          webLinkBtn.textContent = "View Website";
+          webLinkBtn.href = project.webLink;
+          webLinkBtn.target = "_blank";
+          details.appendChild(webLinkBtn);
+        }
+
+        // View code button
+        if (project.codeLink) {
+          const codeLinkBtn = document.createElement("a");
+          codeLinkBtn.classList.add("button");
+          codeLinkBtn.classList.add("code");
+          codeLinkBtn.classList.add("button-secondary");
+          codeLinkBtn.textContent = "View Code";
+          codeLinkBtn.href = project.codeLink;
+          codeLinkBtn.target = "_blank";
+          details.appendChild(codeLinkBtn);
+        }
+
+        if (!project.webLink && !project.codeLink) {
+          const noLinkBtn = document.createElement("p");
+          noLinkBtn.classList.add("no-link");
+          noLinkBtn.textContent =
+            "There is no direct link available for this project.";
+          details.appendChild(noLinkBtn);
+        }
+
+        // Append project item to container
+        projectsContainer.appendChild(projectItem);
       }
-
-      // View code button
-      if (project.codeLink) {
-        const codeLinkBtn = document.createElement("a");
-        codeLinkBtn.classList.add("button");
-        codeLinkBtn.classList.add("code");
-        codeLinkBtn.classList.add("button-secondary");
-        codeLinkBtn.textContent = "View Code";
-        codeLinkBtn.href = project.codeLink;
-        codeLinkBtn.target = "_blank";
-        details.appendChild(codeLinkBtn);
-      }
-
-      if (!project.webLink && !project.codeLink) {
-        const noLinkBtn = document.createElement("p");
-        noLinkBtn.classList.add("no-link");
-        noLinkBtn.textContent =
-          "There is no direct link available for this project.";
-        details.appendChild(noLinkBtn);
-      }
-
-      // Append project item to container
-      projectsContainer.appendChild(projectItem);
     });
 
     // Add scroll event listener to trigger animation
@@ -160,10 +178,47 @@ async function renderProjects() {
 
     // Initially trigger animation for projects in view
     revealProjects();
+
+    // Add event listeners for mobile/tablet tap behavior
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      const projectItems = document.querySelectorAll(".project-item");
+
+      projectItems.forEach((projectItem) => {
+        projectItem.addEventListener("click", () => {
+          if (projectItem.classList.contains("active")) {
+            projectItem.classList.remove("active");
+            console.log(projectItem.classList);
+          } else {
+            // Close all other project items
+            projectItems.forEach((item) => {
+              item.classList.remove("active");
+            });
+            projectItem.classList.add("active");
+          }
+        });
+      });
+    }
   } catch (error) {
     console.error("Error rendering projects:", error);
   }
 }
+
+// Add event listeners to filter buttons
+document.querySelectorAll(".filter-btn").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const filterType = e.target.getAttribute("data-filter");
+
+    // Remove active class from all buttons
+    document.querySelectorAll(".filter-btn").forEach((btn) => {
+      btn.classList.remove("active");
+    });
+
+    // Add active class to the clicked button
+    e.target.classList.add("active");
+
+    renderProjects(filterType);
+  });
+});
 
 // Call the function to render projects with animation
 renderProjects();

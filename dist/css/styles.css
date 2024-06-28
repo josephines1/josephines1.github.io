@@ -425,6 +425,36 @@ nav .container {
   text-align: center;
 }
 
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.button-outline {
+  background-color: transparent;
+  border: 1px solid var(--primary-dark);
+  color: var(--primary-dark);
+  cursor: pointer;
+  border-radius: var(--def-button-radius);
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.button-outline:hover {
+  color: #fff;
+  background-color: var(--primary-dark);
+}
+
+.button-outline.active {
+  background-color: rgba(209, 95, 49, 0.2);
+}
+
+.button-outline.active:hover {
+  color: var(--primary-dark);
+}
+
 .projects-container {
   margin-top: 3rem;
   display: flex;
@@ -453,71 +483,45 @@ nav .container {
   margin-left: auto;
 }
 
-/* Hover hint animation for desktop */
-@media screen and (min-width: 1024px) {
-  .project-item {
-    position: relative;
-    transition: opacity 1.5s ease, transform 1.5s ease, max-height 1.5s ease,
-      box-shadow 0.3s ease;
-  }
-
-  .project-item:hover {
-    box-shadow: 0 0 20px rgba(209, 95, 49, 0.6);
-  }
-
-  .project-item::after {
-    content: "Hover to see more";
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(178, 172, 143, 0.7);
-    border-radius: 2px;
-    color: #fff;
-    padding: 5px 10px;
-    font-size: 0.9em;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    animation: floatHover 5s ease-in-out infinite;
-  }
-
-  .project-item:hover::after {
-    opacity: 0;
-  }
+.type-badge {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-size: 0.875em;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+  animation: floatBadge 5s ease-in-out infinite;
 }
 
-/* Tap hint animation for tablet and mobile */
-@media screen and (max-width: 768px) {
-  .project-item::before {
-    content: "Tap to see more";
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(178, 172, 143, 0.9);
-    border-radius: 2px;
-    color: #fff;
-    padding: 5px 10px;
-    font-size: 0.9em;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    animation: floatHover 5s ease-in-out infinite;
-  }
-
-  .project-item:hover::before,
-  .project-item.active::before {
-    opacity: 0;
-  }
-}
-
-@keyframes floatHover {
+@keyframes floatBadge {
   0%,
   100% {
-    transform: translateY(0) translateX(-50%);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(5px) translateX(-50%);
+    transform: translateY(5px);
   }
+}
+
+.project-item:hover .type-badge {
+  animation: none;
+}
+
+.type-badge.client-project {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.type-badge.self-project {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.type-badge .icon {
+  margin-right: 0.5em;
+  font-size: 1em;
+  color: #fff;
 }
 
 .project-item img {
@@ -549,11 +553,21 @@ nav .container {
   transition: opacity 0.5s ease;
 }
 
-.project-item:hover {
-  max-height: 1000px; /* adjust based on content height */
+@media screen and (min-width: 1024px) {
+  .project-item:hover {
+    max-height: 1000px; /* adjust based on content height */
+  }
+
+  .project-item:hover .details {
+    opacity: 1;
+  }
 }
 
-.project-item:hover .details {
+.project-item.active {
+  max-height: 1000px;
+}
+
+.project-item.active .details {
   opacity: 1;
 }
 
@@ -606,9 +620,10 @@ nav .container {
   transform: translateY(0);
 }
 
-.no-link {
+.project-item p.no-link {
   font-style: italic;
   font-size: 80%;
+  margin-bottom: 1rem;
 }
 
 /* Project Item Animation classes */

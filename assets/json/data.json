@@ -1,19 +1,8 @@
 {
   "portfolios": [
     {
-      "id": 1,
-      "category": "Landing Page",
-      "image": "o-present-landing-page.png",
-      "name": "O-Present Landing Page",
-      "date": "March 23, 2024",
-      "desc": "A landing page for the O-Present Website application with the main aim of directing visitors to download the O-Present application.",
-      "tools": "HTML, CSS, Bootstrap",
-      "webLink": "https://josephines1.github.io/o-present-landing-page/",
-      "codeLink": "https://github.com/josephines1/o-present-landing-page"
-    },
-    {
       "id": 2,
-      "category": "Custom Website",
+      "type": "self-project",
       "image": "opresent.png",
       "name": "O-Present",
       "date": "January 25, 2024 - April 22, 2024",
@@ -24,7 +13,7 @@
     },
     {
       "id": 7,
-      "category": "Custom Website",
+      "type": "client-project",
       "image": "era-afm.png",
       "name": "PT. Sumber Multi Era Motor Inventory System",
       "date": "March 29, 2024 - April 15, 2024",
@@ -34,8 +23,19 @@
       "codeLink": null
     },
     {
+      "id": 1,
+      "type": "self-project",
+      "image": "o-present-landing-page.png",
+      "name": "O-Present Landing Page",
+      "date": "March 23, 2024",
+      "desc": "A landing page for the O-Present Website application with the main aim of directing visitors to download the O-Present application.",
+      "tools": "HTML, CSS, Bootstrap",
+      "webLink": "https://josephines1.github.io/o-present-landing-page/",
+      "codeLink": "https://github.com/josephines1/o-present-landing-page"
+    },
+    {
       "id": 6,
-      "category": "Company Profile",
+      "type": "self-project",
       "image": "kopiking.png",
       "name": "KopiKing Company Profile",
       "date": "December 28, 2023",
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "category": "API-Integrated",
+      "type": "self-project",
       "image": "tastetrack.png",
       "name": "TasteTrack",
       "date": "February 12, 2024",
@@ -57,7 +57,7 @@
     },
     {
       "id": 8,
-      "category": "Company Profile",
+      "type": "self-project",
       "image": "cp-props-construction.png",
       "name": "Props Construction Company Profile",
       "date": "June 21, 2024",
@@ -68,7 +68,7 @@
     },
     {
       "id": 9,
-      "category": "Landing Page",
+      "type": "self-project",
       "image": "lp-luxury-tailored.png",
       "name": "Luxury Tailored Landing Page",
       "date": "June 23, 2024",
@@ -79,7 +79,7 @@
     },
     {
       "id": 3,
-      "category": "API-Integrated",
+      "type": "self-project",
       "image": "flicksearch.png",
       "name": "FlickSearch",
       "date": "February 11, 2024",
