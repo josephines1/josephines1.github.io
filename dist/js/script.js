@@ -184,9 +184,12 @@ async function renderProjects(filterType = "all") {
       const projectItems = document.querySelectorAll(".project-item");
 
       projectItems.forEach((projectItem) => {
-        projectItem.addEventListener("click", () => {
+        projectItem.addEventListener("click", (e) => {
           if (projectItem.classList.contains("active")) {
-            projectItem.classList.remove("active");
+            if (!e.target.classList.contains("button")) {
+              projectItem.classList.remove("active");
+            }
+            console.log(e.target.classList);
           } else {
             projectItem.classList.add("active");
           }
@@ -205,11 +208,11 @@ document.querySelectorAll(".filter-btn").forEach((button) => {
 
     // Remove active class from all buttons
     document.querySelectorAll(".filter-btn").forEach((btn) => {
-      btn.classList.remove("active");
+      btn.classList.remove("selected");
     });
 
-    // Add active class to the clicked button
-    e.target.classList.add("active");
+    // Add selected class to the clicked button
+    e.target.classList.add("selected");
 
     renderProjects(filterType);
   });

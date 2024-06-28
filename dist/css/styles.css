@@ -447,11 +447,11 @@ nav .container {
   background-color: var(--primary-dark);
 }
 
-.button-outline.active {
+.button-outline.selected {
   background-color: rgba(209, 95, 49, 0.2);
 }
 
-.button-outline.active:hover {
+.button-outline.selected:hover {
   color: var(--primary-dark);
 }
 
