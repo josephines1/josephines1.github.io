@@ -462,6 +462,7 @@ nav .container {
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(178, 172, 143, 0.7);
+    border-radius: 2px;
     color: #fff;
     padding: 5px 10px;
     font-size: 0.9em;
@@ -483,7 +484,8 @@ nav .container {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(178, 172, 143, 0.9);
+    border-radius: 2px;
     color: #fff;
     padding: 5px 10px;
     font-size: 0.9em;
