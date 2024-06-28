@@ -187,12 +187,7 @@ async function renderProjects(filterType = "all") {
         projectItem.addEventListener("click", () => {
           if (projectItem.classList.contains("active")) {
             projectItem.classList.remove("active");
-            console.log(projectItem.classList);
           } else {
-            // Close all other project items
-            projectItems.forEach((item) => {
-              item.classList.remove("active");
-            });
             projectItem.classList.add("active");
           }
         });

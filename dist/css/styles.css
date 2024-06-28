@@ -504,10 +504,6 @@ nav .container {
   }
 }
 
-.project-item:hover .type-badge {
-  animation: none;
-}
-
 .type-badge.client-project {
   background-color: var(--primary);
   color: #fff;
@@ -534,10 +530,6 @@ nav .container {
   margin-bottom: 1rem;
 }
 
-.project-item:hover img {
-  animation: floatImage 5s ease-in-out infinite;
-}
-
 @keyframes floatImage {
   0%,
   100% {
@@ -558,8 +550,28 @@ nav .container {
     max-height: 1000px; /* adjust based on content height */
   }
 
+  .project-item:hover img {
+    animation: floatImage 5s ease-in-out infinite;
+  }
+
   .project-item:hover .details {
     opacity: 1;
+  }
+
+  .project-item:hover h3,
+  .project-item:hover .tools,
+  .project-item:hover p,
+  .project-item:hover .badge {
+    opacity: 1;
+  }
+
+  .project-item:hover .button {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .project-item:hover .type-badge {
+    animation: none;
   }
 }
 
@@ -567,8 +579,28 @@ nav .container {
   max-height: 1000px;
 }
 
+.project-item.active img {
+  animation: floatImage 5s ease-in-out infinite;
+}
+
 .project-item.active .details {
   opacity: 1;
+}
+
+.project-item.active h3,
+.project-item.active .tools,
+.project-item.active p,
+.project-item.active .badge {
+  opacity: 1;
+}
+
+.project-item.active .button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-item.active .type-badge {
+  animation: none;
 }
 
 .project-item h3 {
@@ -606,18 +638,6 @@ nav .container {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s; /* Delay for 0.5s */
-}
-
-.project-item:hover h3,
-.project-item:hover .tools,
-.project-item:hover p,
-.project-item:hover .badge {
-  opacity: 1;
-}
-
-.project-item:hover .button {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .project-item p.no-link {
