@@ -264,7 +264,7 @@ nav .container {
 
 .nav-links-mobile {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1rem);
   right: var(--def-container-padding-inline-md);
   background-color: rgba(209, 95, 49, 0.3);
   backdrop-filter: blur(15px);
@@ -297,11 +297,17 @@ nav .container {
 
 @media screen and (max-width: 768px) {
   nav {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background);
+    box-shadow: 0 2px 2px rgba(178, 172, 143, 0.2);
   }
 
   .nav-mobile {
     display: flex;
+    margin-top: 10px;
   }
 
   .nav-links {
@@ -408,7 +414,7 @@ nav .container {
 
 /* Projects */
 #projects {
-  margin-top: 5rem;
+  padding-top: 5rem;
 }
 
 #projects .container {
