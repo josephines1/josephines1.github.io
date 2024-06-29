@@ -108,27 +108,30 @@ async function renderProjects(filterType = "all") {
         description.textContent = project.desc;
         details.appendChild(description);
 
-        // View website button
-        if (project.webLink) {
-          const webLinkBtn = document.createElement("a");
-          webLinkBtn.classList.add("button");
-          webLinkBtn.classList.add("button-primary");
-          webLinkBtn.textContent = "View Website";
-          webLinkBtn.href = project.webLink;
-          webLinkBtn.target = "_blank";
-          details.appendChild(webLinkBtn);
-        }
+        // Project links
+        const links = document.createElement("div");
+        links.classList.add("links");
+        details.appendChild(links);
 
         // View code button
         if (project.codeLink) {
           const codeLinkBtn = document.createElement("a");
-          codeLinkBtn.classList.add("button");
+          codeLinkBtn.classList.add("project-link");
           codeLinkBtn.classList.add("code");
-          codeLinkBtn.classList.add("button-secondary");
-          codeLinkBtn.textContent = "View Code";
+          codeLinkBtn.innerHTML = "<i class='fa-brands fa-github'></i>";
           codeLinkBtn.href = project.codeLink;
           codeLinkBtn.target = "_blank";
-          details.appendChild(codeLinkBtn);
+          links.appendChild(codeLinkBtn);
+        }
+
+        // View website button
+        if (project.webLink) {
+          const webLinkBtn = document.createElement("a");
+          webLinkBtn.classList.add("project-link");
+          webLinkBtn.innerHTML = "&#8599;";
+          webLinkBtn.href = project.webLink;
+          webLinkBtn.target = "_blank";
+          links.appendChild(webLinkBtn);
         }
 
         if (!project.webLink && !project.codeLink) {
@@ -136,7 +139,7 @@ async function renderProjects(filterType = "all") {
           noLinkBtn.classList.add("no-link");
           noLinkBtn.textContent =
             "There is no direct link available for this project.";
-          details.appendChild(noLinkBtn);
+          links.appendChild(noLinkBtn);
         }
 
         // Append project item to container
@@ -178,24 +181,6 @@ async function renderProjects(filterType = "all") {
 
     // Initially trigger animation for projects in view
     revealProjects();
-
-    // Add event listeners for mobile/tablet tap behavior
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      const projectItems = document.querySelectorAll(".project-item");
-
-      projectItems.forEach((projectItem) => {
-        projectItem.addEventListener("click", (e) => {
-          if (projectItem.classList.contains("active")) {
-            if (!e.target.classList.contains("button")) {
-              projectItem.classList.remove("active");
-            }
-            console.log(e.target.classList);
-          } else {
-            projectItem.classList.add("active");
-          }
-        });
-      });
-    }
   } catch (error) {
     console.error("Error rendering projects:", error);
   }
@@ -221,48 +206,83 @@ document.querySelectorAll(".filter-btn").forEach((button) => {
 // Call the function to render projects with animation
 renderProjects();
 
-// Tap Hint for Tablet and Mobile
-document.querySelectorAll(".project-item").forEach((item) => {
-  item.addEventListener("click", () => {
-    item.classList.toggle("active");
-  });
-});
-
 // About - Skills
 const skillsContainer = document.querySelector(".skills-container");
 
-// Function to fetch tools data
-function fetchTools(url) {
+// Function to fetch skills data
+function fetchSkills(url) {
   return fetch(url)
     .then((response) => response.json())
     .catch((error) => {
-      console.error("Error fetching the tools:", error);
+      console.error("Error fetching the skills:", error);
       throw error;
     });
 }
 
-// Function to render tools as badges
-function renderTools(tools, container) {
-  tools.forEach((tool) => {
+// Function to render skills as badges
+function renderSkills(skills, container) {
+  skills.forEach((skill) => {
     const badge = document.createElement("div");
     badge.classList.add("badge");
+    badge.classList.add("skill-badge");
     badge.classList.add("fade-in-up");
 
     const icon = document.createElement("i");
-    icon.className = tool.icon; // Use icon class from JSON
+    icon.className = skill.icon; // Use icon class from JSON
+
+    const textName = document.createElement("span");
+    textName.textContent = skill.name;
+
+    const scaleBar = document.createElement("div");
+    scaleBar.className = "scale-bar";
+    scaleBar.setAttribute("data-scale", `${(skill.scale / 4) * 100}%`);
+
+    const tooltip = document.createElement("div");
+    tooltip.className = "skill-tooltip";
+    tooltip.textContent = `${(skill.scale / 4) * 100}%`;
 
     badge.appendChild(icon);
-    badge.appendChild(document.createTextNode(tool.name));
+    badge.appendChild(scaleBar);
+    badge.appendChild(textName);
+    badge.appendChild(tooltip);
 
     container.appendChild(badge);
+
+    // Observe the section for animation
+    const aboutSection = document.querySelector("#about");
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observerCallback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const scaleBars = document.querySelectorAll(".scale-bar");
+          scaleBars.forEach((scaleBar) => {
+            scaleBar.style.width = scaleBar.getAttribute("data-scale");
+            scaleBar.classList.add("animate");
+          });
+          observer.unobserve(entry.target); // Stop observing once the animation is triggered
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+    observer.observe(aboutSection);
   });
 }
 
 // Main function to initialize fetching and rendering
 function initializeSkills() {
   const skillsContainer = document.querySelector(".skills-container");
-  fetchTools(jsonPath).then((data) => {
-    renderTools(data.tools, skillsContainer);
+  fetchSkills(jsonPath).then((data) => {
+    renderSkills(data.skills, skillsContainer);
   });
 }
 

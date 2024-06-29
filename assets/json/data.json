@@ -39,7 +39,7 @@
       "image": "kopiking.png",
       "name": "KopiKing Company Profile",
       "date": "December 28, 2023",
-      "desc": "A website to display the (fictitious) company profile of Cafe KopiKing is designed to display menu information, our vision, customer testimonials, and a contact page. All content can be easily managed through an intuitive administrator interface.",
+      "desc": "A website to display the (fictitious) company profile of Cafe KopiKing is designed to display menu information, vision, customer testimonials, and a contact page. All content can be easily managed through an intuitive administrator interface.",
       "tools": "MySQL, Laravel 10, Bootstrap",
       "webLink": "https://kopiking.000webhostapp.com/",
       "codeLink": null
@@ -89,58 +89,71 @@
       "codeLink": "https://github.com/josephines1/flicksearch"
     }
   ],
-  "tools": [
+  "skills": [
     {
       "name": "HTML",
-      "icon": "fab fa-html5"
+      "icon": "fab fa-html5",
+      "scale": 4
     },
     {
       "name": "CSS",
-      "icon": "fab fa-css3-alt"
+      "icon": "fab fa-css3-alt",
+      "scale": 4
     },
     {
       "name": "JavaScript",
-      "icon": "fab fa-js"
+      "icon": "fab fa-js",
+      "scale": 3
     },
     {
       "name": "Bootstrap",
-      "icon": "fab fa-bootstrap"
+      "icon": "fab fa-bootstrap",
+      "scale": 4
     },
     {
       "name": "Figma",
-      "icon": "fab fa-figma"
+      "icon": "fab fa-figma",
+      "scale": 2
     },
     {
       "name": "MySQL",
-      "icon": "fas fa-database"
+      "icon": "fas fa-database",
+      "scale": 3
     },
     {
       "name": "PHP",
-      "icon": "fab fa-php"
+      "icon": "fab fa-php",
+      "scale": 4
     },
     {
       "name": "CodeIgniter 4",
-      "icon": "fas fa-fire"
+      "icon": "fas fa-fire",
+      "scale": 4
     },
     {
       "name": "Laravel 10",
-      "icon": "fab fa-laravel"
+      "icon": "fab fa-laravel",
+      "scale": 2
     },
     {
       "name": "Postman",
-      "icon": "fas fa-rocket"
+      "icon": "fas fa-rocket",
+      "scale": 1
     },
     {
       "name": "GIT",
-      "icon": "fa-brands fa-git"
+      "icon": "fa-brands fa-git",
+      "scale": 2
     },
     {
       "name": "Github",
-      "icon": "fa-brands fa-github"
+      "icon": "fa-brands fa-github",
+      "scale": 3
     },
     {
       "name": "Wordpress",
-      "icon": "fab fa-wordpress"
+      "icon": "fab fa-wordpress",
+      "scale": 2
     }
   ]
 }
