@@ -29,7 +29,7 @@
       "name": "O-Present Landing Page",
       "date": "March 23, 2024",
       "desc": "A landing page for the O-Present Website application with the main aim of directing visitors to download the O-Present application.",
-      "tools": "HTML, CSS, Bootstrap",
+      "tools": "HTML, Tailwind CSS, Alpine.js",
       "webLink": "https://josephines1.github.io/o-present-landing-page/",
       "codeLink": "https://github.com/josephines1/o-present-landing-page"
     },
@@ -109,6 +109,21 @@
       "name": "Bootstrap",
       "icon": "fab fa-bootstrap",
       "scale": 4
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "fas fa-wind",
+      "scale": 3
+    },
+    {
+      "name": "Alpine.js",
+      "icon": "fas fa-cogs",
+      "scale": 2
+    },
+    {
+      "name": "Node.js",
+      "icon": "fas fa-server",
+      "scale": 1
     },
     {
       "name": "Figma",
