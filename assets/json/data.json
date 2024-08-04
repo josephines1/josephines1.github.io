@@ -23,15 +23,15 @@
       "codeLink": null
     },
     {
-      "id": 1,
+      "id": 3,
       "type": "self-project",
-      "image": "o-present-landing-page.png",
-      "name": "O-Present Landing Page",
-      "date": "March 23, 2024",
-      "desc": "A landing page for the O-Present Website application with the main aim of directing visitors to download the O-Present application.",
-      "tools": "HTML, Tailwind CSS, Alpine.js",
-      "webLink": "https://josephines1.github.io/o-present-landing-page/",
-      "codeLink": "https://github.com/josephines1/o-present-landing-page"
+      "image": "ostock.png",
+      "name": "O-Stock",
+      "date": "July 31, 2024",
+      "desc": "A website for goods inventory management, to make it easier to manage stock and sales data in all company branches.",
+      "tools": "MySQL, CodeIgniter 4, Myth/Auth, Tabler.io, jQuery",
+      "webLink": null,
+      "codeLink": "https://github.com/josephines1/o-stock"
     },
     {
       "id": 6,
@@ -43,6 +43,17 @@
       "tools": "MySQL, Laravel 10, Bootstrap",
       "webLink": "https://kopiking.000webhostapp.com/",
       "codeLink": null
+    },
+    {
+      "id": 1,
+      "type": "self-project",
+      "image": "o-present-landing-page.png",
+      "name": "O-Present Landing Page",
+      "date": "March 23, 2024",
+      "desc": "A landing page for the O-Present Website application with the main aim of directing visitors to download the O-Present application.",
+      "tools": "HTML, Tailwind CSS, Alpine.js",
+      "webLink": "https://josephines1.github.io/o-present-landing-page/",
+      "codeLink": "https://github.com/josephines1/o-present-landing-page"
     },
     {
       "id": 5,
@@ -76,17 +87,6 @@
       "tools": "HTML, CSS, Bootstrap, JavaScript",
       "webLink": "https://josephines1.github.io/lp-luxury-tailored/",
       "codeLink": "https://github.com/josephines1/lp-luxury-tailored"
-    },
-    {
-      "id": 3,
-      "type": "self-project",
-      "image": "flicksearch.png",
-      "name": "FlickSearch",
-      "date": "February 11, 2024",
-      "desc": "A website that facilitates movie searching using the OMDB API as its data source.",
-      "tools": "HTML, CSS, Bootstrap, JavaScript",
-      "webLink": "https://josephines1.github.io/flicksearch/",
-      "codeLink": "https://github.com/josephines1/flicksearch"
     }
   ],
   "skills": [
