@@ -41,8 +41,8 @@
       "date": "December 28, 2023",
       "desc": "A website to display the (fictitious) company profile of Cafe KopiKing is designed to display menu information, vision, customer testimonials, and a contact page. All content can be easily managed through an intuitive administrator interface.",
       "tools": "MySQL, Laravel 10, Bootstrap",
-      "webLink": "https://kopiking.000webhostapp.com/",
-      "codeLink": null
+      "webLink": null,
+      "codeLink": "https://github.com/josephines1/kopi-king"
     },
     {
       "id": 1,
