@@ -291,7 +291,7 @@ initializeSkills();
 // Contact - Form
 const name = document.getElementById("name");
 const email = document.getElementById("email");
-const phone = document.getElementById("phone");
+// const phone = document.getElementById("phone");
 const message = document.getElementById("message");
 const btnSubmit = document.querySelector(".btn-submit");
 const formControls = document.querySelectorAll(".form-control");
@@ -327,7 +327,7 @@ if (form) {
           formControl.classList = "form-control";
         });
 
-        console.log("Success!", response);
+        // console.log("Success!", response);
       })
       .catch((error) => {
         // Handle error
@@ -341,7 +341,7 @@ if (form) {
 function formValidation() {
   const nameValue = name.value;
   const emailValue = email.value.trim();
-  const phoneValue = phone.value.trim();
+  // const phoneValue = phone.value.trim();
   const messageValue = message.value;
 
   if (nameValue === "") {
